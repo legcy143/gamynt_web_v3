@@ -14,7 +14,6 @@ import { useRouter } from 'next/router';
 const NavBar = () => {
     let router = useRouter();
     let path = router.pathname
-    // console.log(router.asPath) to get path loaction
     const [shrikclass, setshrikclass] = useState(null)
     const [shrinkNavAdjust, setShrinkNavAdjust] = useState(null)
     const sidebaradjust = ()=>{
@@ -44,7 +43,7 @@ const NavBar = () => {
 
             <li className={`${path =="/wallet" && style.active_link}`} onClick={()=>router.push("/wallet")}><WalletIcon /> <p className={shrikclass}>wallet</p></li>
 
-            <li className={`${path =="/subscription" && style.active_link}`} onClick={()=>router.push("/subscription")}><SubscriptionsIcon /> <p className={shrikclass}>subscriptions</p></li>
+            <li className={`${style.mob_hiden} ${path =="/subscription" && style.active_link}`} onClick={()=>router.push("/subscription")}><SubscriptionsIcon /> <p className={shrikclass}>subscriptions</p></li>
 
             <li className={`${path =="/account" && style.active_link}`} onClick={()=>router.push("/account")}><AccountCircleIcon /> <p className={shrikclass}>profile</p></li>
 

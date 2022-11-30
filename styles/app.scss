@@ -2,19 +2,23 @@
 
 .page_view{
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     height: 100vh;
     @include scrollbar();
-    @include mobile(){
-        gap: 1.5rem;
-    }
-    @include mobile400(){
-        gap: 1rem;
-    }
+    // @include mobile(){
+    //     gap: 1.5rem;
+    // }
 
     .page_view_section{
         overflow-y: scroll;
         flex: 1 1 auto;
         @include scrollbar();
+    }
+}
+@media (max-width:650px) {
+    .page_view{
+        .page_view_section{
+            padding-bottom: 4rem;
+        }
     }
 }

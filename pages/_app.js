@@ -5,6 +5,7 @@ import TopNavBar from '../components/Navbar/TopNavBar'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import Head from "next/head"
 
 function MyApp({ Component, pageProps }) {
   const [isnav, setisnav] = useState(0)
@@ -12,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   let path = router.pathname;
   // condition for not showing nav
   useEffect(() => {
-    if (path == "/account") {
+    if (path == "/account/authentication") {
       setisnav(1)
     }
     else{
@@ -21,6 +22,9 @@ function MyApp({ Component, pageProps }) {
   }, [path])
   return (
     <>
+    <Head>
+      <meta name='theme-color' content='rgb(74, 138, 241)'/>
+    </Head>
     {
       isnav === 0?
     <main className='page_view'>

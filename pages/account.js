@@ -4,7 +4,7 @@ import NavBar from '../components/Navbar/NavBar'
 
 // if login is true then render profile component else render authentication component
 const account = () => {
-    const [logincheck, setlogincheck] = useState(true)
+    const [logincheck, setlogincheck] = new useState(true)
   return (
     <main>
         {

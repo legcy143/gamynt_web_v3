@@ -14,11 +14,12 @@
   
   --black-rgb: 1, 1, 1;
 
-  --primary-color:rgb(4, 172, 198);
-  --primary-rgb: 4, 172, 198;
+  // --primary-color:rgb(4, 172, 198);
+  --primary-color:rgb(74, 138, 241);
+  --primary-color-rgb: 74, 138, 241;
 
   --secondry-color: rgb(255, 115, 99);
-  --secondry-rgb: 255, 115, 99;
+  --secondry-color-rgb: 255, 115, 99;
 
   --links-color: rgb(0, 89, 255);
   
@@ -55,28 +56,6 @@ body::-webkit-scrollbar{
   width: 0px;
   height:2rem;
 }
-@mixin ui_box($bg:rgb(103, 16, 78,0.4)){
-  width: min(25rem , 60%);
-  aspect-ratio: 1/1;
-  filter: blur(120px);
-  background-color: $bg;
-  position: fixed;
-  z-index: -1;
-}
-.div_1{
-  @include ui_box;
-  top: 0;
-  left: 0;
-  border-radius:0rem 0rem 100% 0rem;
-
-}
-.div_2{
-  @include ui_box;
-  bottom: 0;
-  right: 0;
-  border-radius:100% 0rem 0rem 0rem;
-}
-
 
 a{
   font-weight: 700;
@@ -86,31 +65,9 @@ a{
   border-radius: 0.35rem;
 }
 button{
-  padding: 0.3rem 0.5rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
-
-  text-transform: capitalize;
-  font-weight: 600;
-  font-size: 1rem;
-  
   cursor: pointer;
-  border: none;
-  border-radius: 0.35rem;
-  // box-shadow: 2px 2px 2px red;
-
   transition: 0.30s ease;
-  transform: translate(0rem , 0rem);
-
-  background:linear-gradient(to right ,rgb(247, 150, 235) , rgb(194, 17, 129));
-  color: rgb(255, 255, 255);
-  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.459);
 }
 button:hover{
-  // transform: translate(0.1rem , 0.1rem);
   transition: 0.30s ease;
-  box-shadow: 0px 0px 0px red;
 }

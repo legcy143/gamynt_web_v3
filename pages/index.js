@@ -1,12 +1,13 @@
-import React , {useState} from 'react'
+import React , {Fragment, useState} from 'react'
 import NavBar from '../components/Navbar/NavBar'
 import TopNavBar from '../components/Navbar/TopNavBar'
+import Crausal from '../Page/Home/Crausal'
 
 export default function index() {
 
   return (
-       <main>
-     hello founders
-    </main>
+       <Fragment>
+     <Crausal/>
+     </Fragment>
   )
 }

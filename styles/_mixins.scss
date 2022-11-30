@@ -25,7 +25,19 @@
     overflow: hidden;
   }
 
-  @mixin scrollbar($width:5px , $height:0px){
+  @mixin  primarybtn(){
+    padding: 0.5rem 1rem;
+    @include flex_box();
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.35rem;
+    transition: 0.30s ease;
+  }
+
+  @mixin scrollbar($width:5px , $height:5px){
     &::-webkit-scrollbar{
         width: $width;
         height: $height;
