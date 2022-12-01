@@ -1,0 +1,63 @@
+@import "../../../styles/mixins";
+
+.top_featured_container{
+    margin: 1rem auto;
+    @include flex_box(column , flex-start , flex-start , 1rem);
+    header{
+        h2{
+            font-size: clamp(1.5rem , calc(1rem + 1vw) , 3rem);
+            @include textgrad();
+        }
+    }
+}
+
+.crausal_container{
+    @include flex_box(row , flex-start , $gap:1.5rem);
+    width: 100%;
+    overflow-x: scroll;
+    @include scrollbar();
+}
+.item{
+    text-transform: capitalize;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.568);
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: 0.30s ease;
+    flex: 0 0 15rem;
+    width: 15rem;
+    aspect-ratio: 1/1;
+    @include  mobile(){
+        flex: 0 0 13rem;
+        width: 13rem;
+    }
+    img{
+        transition: 0.30s ease;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+    div{
+        transition: 0.30s ease;
+        height: 100%;
+        position: relative;
+        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.1));
+        z-index: 2;
+        opacity: 0;
+        p , svg{
+            margin-top: auto;
+        }
+    }
+    &:hover{
+        div{
+            padding: 0.5rem;
+            @include flex_box(row , space-between);
+            opacity: 1;
+        }
+        img{
+            transform: scale(1.1);
+        }
+    }
+}
