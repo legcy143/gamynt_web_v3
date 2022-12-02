@@ -24,12 +24,12 @@
     border-radius: 0.5rem;
     overflow: hidden;
     transition: 0.30s ease;
-    flex: 0 0 15rem;
-    width: 15rem;
+    flex: 0 0 14rem;
+    width: 14rem;
     aspect-ratio: 1/1;
     @include  mobile(){
-        flex: 0 0 13rem;
-        width: 13rem;
+        flex: 0 0 12rem;
+        width: 12rem;
     }
     img{
         transition: 0.30s ease;
@@ -51,6 +51,16 @@
         }
     }
     &:hover{
+        div{
+            padding: 0.5rem;
+            @include flex_box(row , space-between);
+            opacity: 1;
+        }
+        img{
+            transform: scale(1.1);
+        }
+    }
+    @include mobile(){
         div{
             padding: 0.5rem;
             @include flex_box(row , space-between);

@@ -147,3 +147,13 @@
         display: none;
     }
 }
+@media (max-width:650px) {
+    .top_navbar{
+        width: 100%;
+        margin: 0rem;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        border-radius: 0rem 0rem 0.5rem 0.5rem;
+    }
+}
