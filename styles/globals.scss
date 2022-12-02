@@ -8,6 +8,7 @@
   // --theme-nav: #151511cb;
   // --theme-nav: #151511cb;
   --theme-nav: #171717;
+  --theme-card: #15151a;
   
   --black-rgb: 1, 1, 1;
 
@@ -18,13 +19,13 @@
   --secondry-color: rgb(255, 115, 99);
   --secondry-color-rgb: 255, 115, 99;
 
-  --links-color: rgb(0, 89, 255);
+  --link-color: rgb(35, 112, 254);
   
   // colors
   --white: rgba(239, 239, 239);
   --black: rgb(10, 10, 10);
+
   // height and width variables
-  
   --nav-height: 3.5rem;
 }
 *{
@@ -43,7 +44,7 @@ body{
   width: 100vw;
   overflow-x: hidden;
   word-wrap: break-word;
-  word-break: break-all;
+  // word-break: break-all;
   min-height: 100vh;
   color: var(--theme-color);
   display: flex;
@@ -56,12 +57,13 @@ body::-webkit-scrollbar{
 
 a{
   font-weight: 700;
-  color: var(--links-color);
+  color: var(--link-color);
   text-decoration: none;
   transition: 0.30s ease;
   border-radius: 0.35rem;
 }
 button{
+  font: inherit;
   cursor: pointer;
   transition: 0.30s ease;
 }
