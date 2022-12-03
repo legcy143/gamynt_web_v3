@@ -1,8 +1,7 @@
 import React , {Fragment} from 'react'
 import style from "./styles/club.module.scss"
 import Topfeaturedclubs from "../Page/Clubs/Topfeaturedclubs"
-import Joindclub from "../page/Clubs/Joinedclub"
-
+import Joindclub from "../Page/Clubs/Joinedclub"
 const Club = () => {
   return (
     <Fragment>
