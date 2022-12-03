@@ -3,8 +3,10 @@
 
 // toop player ldr board
 .top_leaderboard_main{
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.04);
     margin: 1rem auto;
-    padding: 1rem 0rem;
+    padding: 1rem 0.5rem;
     @include flex_box(column , flex-start , flex-start , 0.1rem);
     text-transform: capitalize;
     header{
@@ -27,7 +29,7 @@
     flex: 0 0 10rem;
     width: 10rem;
     @include flex_box(column);
-    border: 1px solid rgba(238, 238, 238, 0.25);
+    border: 2px solid rgba(238, 238, 238, 0.55);
     background-color: var(--theme-card);
     backdrop-filter: blur(20px);
     legend{

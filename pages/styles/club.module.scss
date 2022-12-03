@@ -1,0 +1,9 @@
+@import "../../styles/mixins";
+
+.club_nav{
+    position: sticky;
+    top: 4rem;
+    padding: 0.5rem 0.3rem;
+    @include flex_box(row , space-between);
+    background-color: var(--theme-nav);
+}
