@@ -4,7 +4,7 @@
 // toop player ldr board
 .top_leaderboard_main{
     border-radius: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.04);
+    // background-color: rgba(255, 255, 255, 0.04);
     margin: 1rem auto;
     padding: 1rem 0.5rem;
     @include flex_box(column , flex-start , flex-start , 0.1rem);
@@ -29,9 +29,9 @@
     flex: 0 0 10rem;
     width: 10rem;
     @include flex_box(column);
-    border: 2px solid rgba(238, 238, 238, 0.55);
+    border: 2px solid rgba(69, 68, 68, 0.59);
     background-color: var(--theme-card);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
     legend{
         @include textgrad(180deg ,goldenrod , orange);
         color: goldenrod;
@@ -63,8 +63,8 @@
             border-radius: 0.3rem;
             bottom: -10%;
             position: absolute;
-            background-color: rgba(22, 22, 22, 0.52);
-            backdrop-filter: blur(10px);
+            background-color: rgba(22, 22, 22, 0.42);
+            backdrop-filter: blur(2px);
         }
     }
     p{
