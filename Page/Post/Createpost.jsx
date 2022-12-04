@@ -8,7 +8,7 @@ const Createpost = () => {
       <section className={style.more_inputs}>
         <div>image</div>
         <div>poll</div>
-        <div>send</div>
+        <div>post</div>
       </section>
     </main>
   )

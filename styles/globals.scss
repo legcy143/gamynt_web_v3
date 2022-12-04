@@ -30,6 +30,9 @@
 
   // height and width variables
   --nav-height: 3.5rem;
+
+  // verify batch colors
+  --verify-color: rgb(20, 130, 255);
 }
 *{
   margin: 0;
@@ -74,7 +77,7 @@ button:hover{
   transition: 0.30s ease;
 }
 input , textarea{
-  font-family: inherit;
+  // font-family: inherit;
   color: inherit;
   &::placeholder{
     opacity: 0.8;
