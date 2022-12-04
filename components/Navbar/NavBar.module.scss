@@ -158,7 +158,7 @@
     }
 }
 
-@media (max-width:650px) {
+@media (max-width:$mobile) {
     .navbar {
         margin: 0;
         padding: 0;

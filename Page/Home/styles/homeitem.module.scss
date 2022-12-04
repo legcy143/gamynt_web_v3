@@ -15,7 +15,7 @@
     header{
         h2{
             font-size: clamp(1.5rem , calc(1rem + 1vw) , 3rem);
-            @include textgrad();
+            @include textgrad(to right , #FAFFD1 , #A1FFCE );
         }
     }
 }
@@ -134,7 +134,7 @@
 }
 .tournament_info{
     width: 100%;
-    padding: 0.4rem 0.5rem;
+    padding: 0.5rem 0.5rem;
     // @include flex_box(row , space-between);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -142,10 +142,11 @@
     align-items: center;
     justify-content: center;
     p{
+        padding: 0.2rem 0.5rem;
+        height: 3rem;
         @include flex_box(row , flex-start);
         background-color: #1f1f25;
         border-radius: 0.4rem;
-        padding: 0.3rem 0.5rem;
         &:nth-child(1){
             img{
                 border-radius: 50%;
@@ -154,8 +155,6 @@
 
     }
 }
-
-
 
 
 
@@ -191,7 +190,7 @@
         h1{
     @include textwrap(1);
     font-weight: 500;
-    font-size: 1.3rem
+    font-size: 1.3rem;
         }
         p{
             @include flex_box(row , flex-start);

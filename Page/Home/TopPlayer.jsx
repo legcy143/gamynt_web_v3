@@ -7,15 +7,14 @@ const TopPlayer = () => {
   return (
     <main className={style.top_leaderboard_main}>
 <header>
-  <h2>top player</h2>
-  <p>of the weak</p>
+  <h2>top player of the weak</h2>
 </header>
 <section className={style.crausal_container}>
     <fieldset className={style.player_box}>
 <legend><EmojiEventsIcon/> 1 <span>st</span></legend>
 <div>
     <Image src="/images/pubg.jpeg" alt="" width={200} height={200}/>
-    <h2>name is name</h2>
+    <h2>name is name </h2>
 </div>
     <p>1300 point</p>
     <button>view profile</button>
