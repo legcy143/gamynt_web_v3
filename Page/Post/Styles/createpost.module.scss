@@ -4,7 +4,7 @@
     padding: 0.5rem;
     width: $post_container_width;
     border-radius: 0.5rem;
-    border: 1px solid rgba(238, 238, 238, 0.397);
+    border: 3px solid rgb(47, 47, 47);
     @include flex_box(column , flex-start);
     textarea{
         margin:0.5rem auto;
@@ -15,8 +15,8 @@
         font-size: 1rem;
         line-height: 1.4rem;
         padding: 0.5rem 0.3rem;
-        border: 1px solid rgba(238, 238, 238, 0);
-        background-color: rgba(206, 206, 206, 0.329);
+        border: 3px solid rgba(111, 110, 110, 0.337);
+        background-color: #15151a;
         outline: none;
         resize: none;
         font-family: inherit;
