@@ -1,8 +1,12 @@
 import React from 'react'
+import Profilecard from './component/Profilecard'
+import style from "./styles/profile.module.scss"
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <main className={style.profile_main}>
+        <Profilecard/>
+    </main>
   )
 }
 

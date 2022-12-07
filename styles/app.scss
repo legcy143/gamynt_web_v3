@@ -21,3 +21,14 @@
         }
     }
 }
+
+
+// components
+
+button{
+    @include flex_box();
+    text-transform: capitalize;
+    background-color: var(--primary-color);
+    color: inherit;
+    border-radius: 0.3rem;
+}

@@ -1,8 +1,11 @@
 import React from 'react'
+import style from "./styles/clubitem.module.scss"
 
 const Topfeaturedclubs = () => {
   return (
-    <div>Topfeaturedclubs</div>
+    <main className={style.top_featured_club}>
+
+    </main>
   )
 }
 

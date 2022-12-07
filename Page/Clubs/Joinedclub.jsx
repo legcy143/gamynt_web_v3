@@ -1,24 +1,14 @@
 import React from 'react'
+import Clubcard from './Clubcard'
 import style from "./styles/clubitem.module.scss"
 import VerifiedIcon from '@mui/icons-material/Verified';
 
+
 const Joinedclub = () => {
+  let testimg = "/images/freefire.jpeg"
   return (
     <main className={style.club_card_container}>
-<section className={style.club_card}>
-  <header>
-<img src="/images/freefire.jpeg" alt="" />
-  </header>
-  <div className={style.profile_img}>
-  <img src="/images/freefire.jpeg"  alt="" />
-  <h1>name hai bulla <VerifiedIcon/></h1>
-  </div>
-  <div className={style.club_info}>
-    <p>250 member</p>
-    <p>250 active</p>
-  </div>
-  <button>join</button>
-</section>
+<Clubcard banner={testimg} logo={testimg} name={"bulla ka anda hai ye anda "} batch={<VerifiedIcon/>} member={50} active={20} />
     </main>
   )
 }
