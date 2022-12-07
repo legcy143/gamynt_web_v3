@@ -1,9 +1,58 @@
 @import "../../styles/mixins";
 
+
+// navbar 
 .club_nav{
+    border: 1px solid #eee;
+    padding: 0.5rem;
     position: sticky;
-    top: 4rem;
-    padding: 0.5rem 0.3rem;
-    @include flex_box(row , space-between);
-    background-color: var(--theme-nav);
+    top: calc($navheight + 0px);
+    background-color: var(--theme-bg);
+    @include flex_box($gap:0rem);
+    text-transform: capitalize;
+    z-index: 5;
+    ul{
+        position: relative;
+        cursor: pointer;
+        padding: 0.5rem 0.8rem;
+        @include flex_box(row , $gap:0.5rem);
+        list-style: none;
+        color: var(--theme-color-dark);
+        li{
+            font-size: 0.8rem;
+            list-style: none;
+        }
+        &:hover:not(.active_link){
+            color: var(--theme-color);
+        }
+        
+    }
 }
+.active_link {
+    &::before {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        border-bottom: 5px solid var(--primary-color);
+        background-color: rgba(var(--primary-color-rgb), 0.1);
+        border-radius: 0.2rem;
+    }
+}
+@media (max-width:$mobile) {
+    .club_nav{
+        top: 0rem;
+        justify-content: space-between;
+        ul{
+            padding: 0.5rem;
+            width: 100%;
+        @include flex_box(column , $gap:0rem);
+        li{
+            font-size: 0.7rem;
+        }
+    }
+}
+}
+

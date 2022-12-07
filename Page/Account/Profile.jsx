@@ -25,6 +25,32 @@ const Profile = () => {
             <li>shorts</li>
           </ul>
         </nav>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, mollitia veritatis perferendis quaerat sequi repudiandae quia vero aspernatur quasi ipsam qui maiores, sed distinctio magni omnis. Praesentium neque voluptate reprehenderit?
+          br
+        <br /><br /><br /><br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br /><br /><br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur consequatur iusto eveniet esse sint incidunt a, dolorum quo deserunt autem numquam id praesentium explicabo! Quia, autem consectetur? Doloremque, molestias doloribus?
+        </p>
     </main>
   )
 }
