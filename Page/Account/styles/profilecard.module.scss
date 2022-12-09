@@ -61,6 +61,8 @@
     p{
         width: min(30rem ,100%);
         @include textwrap(3);
+        font-weight: 300;
+        line-height: 1.4rem;
     }
 }
 
