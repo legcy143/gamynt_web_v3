@@ -3,27 +3,25 @@ import style from "./styles/club.module.scss"
 import Topfeaturedclubs from "../Page/Clubs/Topfeaturedclubs"
 import Joindclub from "../Page/Clubs/Joinedclub"
 import FriendsIcon from '@mui/icons-material/Diversity3';
+import Exploreclub from '../Page/Clubs/Exploreclub';
 const Club = () => {
   return (
     <Fragment>
       <Topfeaturedclubs/>
       <nav className={style.club_nav}>
           <ul className={style.active_link}>
-            joined club
+            joined
           </ul>
           <ul>
-            my guild
+            explore
           </ul>
           <ul>
-            <FriendsIcon/>
-            <li>post</li>
-          </ul>
-          <ul>
-            <FriendsIcon/>
-            <li>shorts</li>
+            <li>club</li>
           </ul>
         </nav>
-      <Joindclub />
+      
+      {/* <Joindclub /> */}
+   <Exploreclub />
     </Fragment>
   )
 }

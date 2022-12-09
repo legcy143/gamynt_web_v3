@@ -2,6 +2,14 @@
 
 
 .top_featured_club{
-    border: 1px solid #eee;
+    padding: 1rem;
+    @include flex_box(row , flex-start);
+    overflow-x: scroll;
+    @include scrollbar();
 }
 
+.club_card_container{
+    padding: 0.5rem;
+    @include flex_box(row , center , center , 1rem);
+    flex-wrap: wrap;
+}

@@ -3,13 +3,14 @@
 
 // navbar 
 .club_nav{
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
     position: sticky;
-    top: calc($navheight + 0px);
+    top: calc($navheight - 1px);
     background-color: var(--theme-bg);
     @include flex_box($gap:0rem);
     text-transform: capitalize;
     z-index: 5;
+    width: 100%;
     ul{
         position: relative;
         cursor: pointer;
@@ -17,6 +18,10 @@
         @include flex_box(row , $gap:0.5rem);
         list-style: none;
         color: var(--theme-color-dark);
+        &:last-child{
+            margin-left: auto;
+            border: 1px solid #eee;
+        }
         li{
             font-size: 0.8rem;
             list-style: none;
