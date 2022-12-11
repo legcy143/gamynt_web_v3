@@ -13,17 +13,26 @@
     @include scrollbar();
     header{
         z-index: 10;
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
         border-bottom: 2px;
         position:sticky;
         top: 0;
         border-bottom: 2px solid rgba(168, 168, 168, 0.589);
         background-color: inherit;
         backdrop-filter: blur(50px);
+        @include flex_box(row , space-between);
         h1{
             text-transform: capitalize;
             @include textgrad();
             @include fontsize();
+        }
+        button{
+            padding: 0.1rem 0.4rem;
+            opacity: 0.9;
+            @include flex_box($gap:0.1rem);
+            &:hover{
+                opacity: 1;
+            }
         }
     }
 }

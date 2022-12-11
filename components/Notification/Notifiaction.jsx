@@ -1,4 +1,5 @@
 import React from 'react'
+import CloseIcon from '@mui/icons-material/Close';
 import style from "./notify.module.scss"
 
 
@@ -7,6 +8,9 @@ const Notifiaction = () => {
     <main className={style.notification_main_container}>
         <header>
             <h1>notification</h1>
+            <button>
+                <CloseIcon/> clear
+            </button>
         </header>
         <section className={style.notification}>
             <img src="/images/freefire.jpeg" alt="img" />
