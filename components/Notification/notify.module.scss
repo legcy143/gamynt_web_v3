@@ -11,6 +11,7 @@
     overflow: hidden;
     overflow-y: auto;
     @include scrollbar();
+    position: relative;
     header{
         z-index: 10;
         padding: 0.5rem 1rem;
@@ -37,11 +38,24 @@
     }
 }
 
+.clearnotification{
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.5rem;
+    backdrop-filter: blur(50px);
+    width: fit-content;
+    position: sticky !important;
+    bottom: 1rem;
+    @include flex_box();
+    // z-index: 11;
+    background-color:rgba(var(--secondry-color-rgb) , 0.6);
+}
+
+
 .notification{
     padding: 0.5rem;
     margin: 0.7rem auto;
     border-radius: 0.4rem;
-    background-color: rgba(54, 58, 28, 0.961);
+    background-color: rgba(54, 56, 40, 0.961);
     width: 94%;
     @include flex_box(row , flex-start);
     box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.8);

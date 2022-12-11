@@ -8,9 +8,6 @@ const Notifiaction = () => {
     <main className={style.notification_main_container}>
         <header>
             <h1>notification</h1>
-            <button>
-                <CloseIcon/> clear
-            </button>
         </header>
         <section className={style.notification}>
             <img src="/images/freefire.jpeg" alt="img" />
@@ -33,6 +30,17 @@ const Notifiaction = () => {
                 <span>12:12 pm</span>
             </div>
         </section>
+        <section className={style.notification}>
+            <img src="/images/freefire.jpeg" alt="img" />
+            <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <span>12:12 pm</span>
+            </div>
+        </section>
+{/* clear all btn */}
+        <div className={style.clearnotification}>
+        <CloseIcon/> clear All
+        </div>
     </main>
   )
 }
