@@ -9,12 +9,12 @@ import Head from "next/head"
 
 
 function MyApp({ Component, pageProps }) {
-  const [isnav, setisnav] = useState(0)
+  const [isnav, setisnav] = useState(1)
   let router = useRouter()
   let path = router.pathname;
   // condition for not showing nav
   useEffect(() => {
-    if (path == "/account/authentication") {
+    if (path == "/club/chat") {
       setisnav(1)
     }
     else{

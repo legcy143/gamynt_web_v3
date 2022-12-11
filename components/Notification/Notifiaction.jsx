@@ -1,7 +1,7 @@
 import React from 'react'
 import CloseIcon from '@mui/icons-material/Close';
 import style from "./notify.module.scss"
-
+import data from "../data/update.json"
 
 const Notifiaction = () => {
   return (
@@ -9,34 +9,20 @@ const Notifiaction = () => {
         <header>
             <h1>notification</h1>
         </header>
-        <section className={style.notification}>
+        {
+            data.map((item)=>{
+                return(
+                    <section className={style.notification} key={item.id}>
             <img src="/images/freefire.jpeg" alt="img" />
             <div>
-                <p>hello sid how are</p>
-                <span>12:12 pm</span>
+                <p><b>{item.user}</b></p>
+                <p>{item.tittle}</p>
+                <span>{item.time}</span>
             </div>
         </section>
-        <section className={style.notification}>
-            <img src="/images/freefire.jpeg" alt="img" />
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas delectus et nulla unde aspernatur pariatur corrupti. Minus, blanditiis! Explicabo quasi enim doloribus similique rerum sunt repudiandae facilis inventore suscipit voluptas!</p>
-                <span>12:12 pm</span>
-            </div>
-        </section>
-        <section className={style.notification}>
-            <img src="/images/freefire.jpeg" alt="img" />
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <span>12:12 pm</span>
-            </div>
-        </section>
-        <section className={style.notification}>
-            <img src="/images/freefire.jpeg" alt="img" />
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <span>12:12 pm</span>
-            </div>
-        </section>
+                )
+            })
+        }
 {/* clear all btn */}
         <div className={style.clearnotification}>
         <CloseIcon/> clear All

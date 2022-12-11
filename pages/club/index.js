@@ -1,9 +1,7 @@
 import React , {Fragment} from 'react'
-import style from "./styles/club.module.scss"
-import Topfeaturedclubs from "../Page/Clubs/Topfeaturedclubs"
-import Joindclub from "../Page/Clubs/Joinedclub"
-import FriendsIcon from '@mui/icons-material/Diversity3';
-import Exploreclub from '../Page/Clubs/Exploreclub';
+import style from "../styles/club.module.scss"
+import Topfeaturedclubs from "../../Page/Clubs/Topfeaturedclubs"
+import Exploreclub from "../../Page/Clubs/Exploreclub"
 
 const Club = () => {
   return (
