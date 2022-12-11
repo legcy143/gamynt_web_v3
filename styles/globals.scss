@@ -79,9 +79,11 @@ button:hover{
 }
 input , textarea{
   // font-family: inherit;
+  transition: 0.30s ease;
   color: inherit;
   &::placeholder{
-    opacity: 0.8;
+    transition: 0.30s ease;
+    opacity: 0.7;
     color: inherit;
   }
 }

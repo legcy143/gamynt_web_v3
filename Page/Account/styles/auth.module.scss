@@ -1,35 +1,14 @@
 @import "../../../styles/mixins";
 
 .auth_main_container{
-    height: 100%;
     margin: 0rem auto;
     height: calc(100vh - var(--nav-height) - 2rem);
     @include flex_box()
 }
-
-.image_authentication{
-    position: relative;
-    width: 35%;
-    div{
-        padding: 0.5rem;
-        position: absolute;
-        top: 30%;
-        z-index: 11;
-        background-color: rgba(14, 14, 14, 0.1);
-        backdrop-filter: blur(3px);
-    }
-    img{
-        object-fit: cover;
-        width: 100%;
-        height: fit-content;
-        object-fit: cover;
-        filter: drop-shadow(1px 1px 10px green);
-    }
-}
-
 .auth_card_ui{
+    border-radius: 0.5rem;
     transition: 0.30s ease;
-    width: min(25rem ,50%);
+    width: min(25rem ,80%);
     height: max-content;
     position: relative;
     overflow: hidden;
@@ -66,7 +45,8 @@
     width: 100%;
     height: 100%;
     position: relative;
-    padding: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
     z-index: 10;
     background-color: var(--theme-card);
     header{
@@ -75,7 +55,7 @@
     nav{
         list-style: none;
         padding: 0.3rem 1rem;
-        @include flex_box(row , space-between);
+        @include flex_box($gap:5rem);
         li{
             font-size: 1.1rem;
             transition: 0.30s ease;
@@ -100,13 +80,28 @@
 
 //  login signup ui
 .auth_form{
-    padding: 0.5rem 0rem;
+    padding: 1rem 0rem;
     width: 100%;
+    height: 15rem;
     @include flex_box(column);
+    animation: fade 1s ease;
     button{
+        margin: 1rem auto;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+        background-color: rgba(0, 255, 255, 0.4);
         width: min(10rem , 90%);
     }
 }
+@keyframes fade {
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 .form_input_box{
     width: 90%;
     @include flex_box($gap:0rem);
@@ -126,4 +121,37 @@
             text-transform: capitalize;
         }
     }
+}
+
+.otp_box{
+    @include flex_box();
+    input{
+        border: none;
+        outline: none;
+        border-radius: 0.4rem;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.158);
+        line-height: 1.5rem;
+        font-size: 1.5rem;
+        width: min(3rem , 20%);
+        aspect-ratio: 1/1;
+        &::placeholder{
+            opacity: 0.5;
+        }
+        &:focus{
+            &::placeholder{
+                opacity: 0.1;
+            }
+        }
+    }
+}
+
+@media (max-width:$mobile) {
+    .auth_main_container{
+        height: calc(100vh - 2*var(--nav-height) - 1rem)}
+        .auth_card{
+            nav{
+                gap: 2rem;
+            }
+        }
 }

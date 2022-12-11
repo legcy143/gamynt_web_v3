@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Signup from './Signup'
+import Login from './Login'
 import style from "./styles/auth.module.scss"
 
 
 const Authentication = () => {
+  const [navnumber, setnavnumber] = useState(0)
+  const [compo, setcompo] = useState(<Signup/>)
+
+  useEffect(() => {
+    {navnumber === 0 ? setcompo(<Signup/>) : setcompo(<Login/>)}
+  }, [navnumber])
+  
+
   return (
     <main className={style.auth_main_container}>
-            <section className={style.image_authentication}>
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem mollitia cumque doloremque libero? Ipsum nostrum esse natus praesentium sequi, ratione recusandae delectus minima alias perspiciatis modi, voluptatem iusto, beatae labore? </div>
-                <img src="/login-bg-3.png" alt="" />
-            </section>
-
             <section className={style.auth_card_ui}>
                 <section className={style.auth_card}>
                     <header>
@@ -19,10 +23,10 @@ const Authentication = () => {
                         </h1>
                     </header>
                     <nav>
-                        <li className={style.active}>Sign up</li>
-                        <li>Log in</li>
+                        <li className={`${navnumber == 0 && style.active}`} onClick={()=>{setnavnumber(0)}}>Sign up</li>
+                        <li className={`${navnumber == 1 && style.active}`} onClick={()=>{setnavnumber(1)}}>Log in</li>
                     </nav>
-                    <Signup/>
+                    {compo}
                 </section>
             </section>
     </main>
