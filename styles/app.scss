@@ -1,5 +1,9 @@
 @import "./mixins";
 
+.model{
+@include flex_box();
+}
+
 .page_view{
     display: flex;
     gap: 1.5rem;

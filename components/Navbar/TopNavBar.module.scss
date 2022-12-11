@@ -12,6 +12,9 @@
     top: 0rem;
     transition: 0.30s ease;
     z-index: 50;
+    svg{
+        cursor: pointer;
+    }
     section{
         @include flex_box();
     }

@@ -1,5 +1,6 @@
 // varibale
 @import "./variable.scss";
+@import "./shorthand.scss";
 
 // flex_box
 @mixin flex_box($direction:row , $justify:center , $align:center , $gap:0.5rem){
@@ -44,6 +45,7 @@
 
   @mixin scrollbar($width:5px , $height:5px){
     &::-webkit-scrollbar{
+        overflow: hidden;
         width: $width;
         height: $height;
     }
