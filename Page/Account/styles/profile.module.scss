@@ -8,12 +8,8 @@
 // navbar 
 .nav{
     padding: 1rem 0.5rem;
-    position: sticky;
-    top: calc($navheight - 1px);
-    background-color: var(--theme-bg);
-    @include flex_box($gap:0rem);
-    text-transform: capitalize;
-    z-index: 10;
+@include stickynav();
+@include flex_box($gap:0rem);
     ul{
         position: relative;
         cursor: pointer;

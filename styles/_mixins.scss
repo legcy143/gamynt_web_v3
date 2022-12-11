@@ -56,6 +56,15 @@
     }
   }
 
+  @mixin stickynav(){
+    padding:1rem  0.5rem;
+    position: sticky;
+    top: calc($navheight - 1px);
+    background-color: var(--theme-bg);
+    text-transform: capitalize;
+    z-index: 10;
+  }
+
 
 // media quires
 @mixin mobile350(){

@@ -1,11 +1,12 @@
+import React , { useState , useEffect }from 'react';
 import '../styles/globals.scss'
 import '../styles/app.scss'
 import NavBar from '../components/Navbar/NavBar'
 import TopNavBar from '../components/Navbar/TopNavBar'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
-import { useEffect } from 'react'
 import Head from "next/head"
+
+
 
 function MyApp({ Component, pageProps }) {
   const [isnav, setisnav] = useState(0)
@@ -23,7 +24,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
     <Head>
-      <meta name='theme-color' content='rgb(74, 138, 241)'/>
+      <meta name='theme-color' content='red'/>
     </Head>
     {
       isnav === 0?

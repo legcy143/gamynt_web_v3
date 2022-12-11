@@ -3,13 +3,8 @@
 
 // navbar 
 .club_nav{
-    padding: 1rem 0.5rem;
-    position: sticky;
-    top: calc($navheight - 1px);
-    background-color: var(--theme-bg);
+    @include stickynav();
     @include flex_box($gap:0rem);
-    text-transform: capitalize;
-    z-index: 5;
     width: 100%;
     ul{
         position: relative;
