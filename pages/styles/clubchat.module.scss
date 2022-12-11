@@ -1,8 +1,7 @@
 .chat_page_container_main{
     height: 100%;
     border: 1px solid rgba(238, 238, 238, 0.457);
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
     height: 100vh;
     overflow: hidden;
 }

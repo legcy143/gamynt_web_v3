@@ -1,8 +1,11 @@
 import React from 'react'
+import style from "./styles/member.module.scss"
 
 const Memberstatus = () => {
   return (
-    <div>Memberstatus</div>
+    <main className={style.member_container_main}>
+      <h1>member</h1>
+    </main>
   )
 }
 
