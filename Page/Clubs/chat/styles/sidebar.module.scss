@@ -8,6 +8,7 @@
     gap: 0.3;
     height: 100%;
     overflow-y: hidden;
+    border-radius: 0.5rem
 }
 
 // club side main continer width
@@ -45,9 +46,9 @@
 
 // side bar ui main container for width
 .sidebar_container{
-    border: 1px solid rgba(238, 238, 238, 0.616);
     overflow-y: auto;
     @include scrollbar(0px , 0px);
+    background-color: rgb(41, 41, 41);
 }
 .club_logo{
     position: sticky;

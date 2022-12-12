@@ -1,0 +1,51 @@
+@import "../../../../styles/mixins";
+
+// input box ui 
+.send_message_input{
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    position: absolute !important;
+    bottom: 0px;
+    border: 2px solid rgba(238, 238, 238, 0.416);
+    width: 100%;
+    background-color: black;
+    @include flex_box();
+    label{
+        @include flex_box();
+    }
+    input{
+        display: none;
+    }
+    textarea{
+        font-family: sans-serif;
+        padding: 0.5rem 0.2rem;
+        border: none;
+        outline: none;
+        width: 100%;
+        background-color: inherit;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        resize: none;
+        height: fit-content;
+        @include scrollbar();
+        &:focus{
+            &::placeholder{
+                padding-left: 0.5rem;
+        }
+            
+        }
+    }
+    svg{
+        transition: 1s ease;
+        opacity: 0.7;
+        &:last-child{
+            transition: 0.30s ease;
+            transform: rotate(-20deg);
+            color: rgba(var(--secondry-color-rgb),0.7);
+        }
+        cursor: pointer;
+        &:hover{
+            transform: rotate(360deg) scale(1.1);
+        }
+    }
+}

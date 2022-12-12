@@ -2,6 +2,9 @@ import React from 'react'
 import Chatnav from './utlis/Chatboxnav'
 import style from "./styles/chat.module.scss"
 import Memberstatus from "./Memberstatus"
+import Welcomechat from './utlis/Welcomechat'
+import Inputbox from './utlis/Inputbox'
+
 
 const Chatbox = () => {
   return (
@@ -9,7 +12,10 @@ const Chatbox = () => {
       <Chatnav/>
       <main className={style.member_chat_container}>
       <section className={style.chat_container}>
-        hello wolrd wolfajhfdjhasdfhasdf lfasdfasdfsadfsdfsdfsadfsadfsadfsadfasdf
+        <Welcomechat clubname={"gamynt"}/>
+
+hello from chahter
+<Inputbox/>
         </section> 
       <Memberstatus />
       </main>

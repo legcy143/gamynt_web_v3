@@ -13,6 +13,8 @@ export default function Document() {
                     rel="stylesheet"
                     href="https://fonts.googleapis.com/icon?family=Material+Icons"
                 />
+                 <meta charset="utf-8" name="viewport" 
+        content= "width=device-width, initial-scale=1.0"></meta>
             </Head>
             <body>
                 <Main />
