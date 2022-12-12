@@ -49,13 +49,13 @@ html{
 body{
   font-family: 'Changa', sans-serif;
   background-color: var(--theme-bg);
+  color: var(--theme-color);
   width: 100vw;
   overflow-x: hidden;
   word-wrap: break-word;
   // word-break: break-all;
-  height:auto !important;
-  min-height: 100vh;
-  color: var(--theme-color);
+  height:auto!important;
+  min-height:100vh;
   display: flex;
   flex-direction: column;
 }

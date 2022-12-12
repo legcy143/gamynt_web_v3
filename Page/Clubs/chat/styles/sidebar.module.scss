@@ -8,7 +8,8 @@
     gap: 0.3;
     height: 100%;
     overflow-y: hidden;
-    border-radius: 0.5rem
+    border-radius: 0.2rem;
+    transition: 0.30s ease;
 }
 
 // club side main continer width
@@ -16,6 +17,7 @@
     @include flex_box(column , flex-start);
     overflow-y: auto;
     @include scrollbar(0px , 0px);
+    transition: 0.30s ease;
 }
 .club_list{
     @include flex_box(column , flex- , center , 1rem);
@@ -34,11 +36,13 @@
     }
 }
 .back_to_club{
+    padding: 0.3rem 0.1rem;
     @include flex_box();
     width: 100%;
     position: sticky;
     top: 0%;
     background-color: inherit;
+    background-color: rgba(var(--secondry-color-rgb) , 0.1);
     backdrop-filter: blur(50px);
     z-index: 10;
 }
@@ -49,6 +53,7 @@
     overflow-y: auto;
     @include scrollbar(0px , 0px);
     background-color: rgb(41, 41, 41);
+    transition: 0.30s ease;
 }
 .club_logo{
     position: sticky;
@@ -118,5 +123,19 @@
             opacity: 1;
         }
 
+    }
+}
+
+@media (max-width:$tablet) {
+    .sidebar_main{
+        flex: 0 0 16rem;
+        width: 16rem;
+        grid-template-columns: 4rem 11.7rem;
+        gap: 0.3;
+    }
+    .club_logo{
+        h1{
+            font-size: 1rem;
+        }
     }
 }

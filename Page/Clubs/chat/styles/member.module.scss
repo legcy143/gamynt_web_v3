@@ -1,5 +1,6 @@
 @import "../../../../styles/mixins";
 
+
 .member_container_main{
     flex: 0 0 16rem;
     width: 16rem;
@@ -8,7 +9,8 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    @include scrollbar(0px , 0px)
+    @include scrollbar(0px , 0px);
+    transition: 0.30s ease ;
 }
 .search_member_input{
     padding: 0.3rem;
@@ -36,7 +38,7 @@
 
 .total_member{
     position: sticky;
-    top: 2rem;
+    top: 2.4rem;
     padding: 0.1rem  0.5rem;
     @include flex_box(row , space-between);
     background-color: inherit;
@@ -73,4 +75,11 @@
         }
     }
 
+}
+
+@media (max-width:$tablet) {
+    .member_container_main{
+        flex: 0 0 13rem;
+        width: 13rem;
+    }
 }

@@ -4,6 +4,7 @@ import style from "./styles/chat.module.scss"
 import Memberstatus from "./Memberstatus"
 import Welcomechat from './utlis/Welcomechat'
 import Inputbox from './utlis/Inputbox'
+import Message from './utlis/Message'
 
 
 const Chatbox = () => {
@@ -13,8 +14,15 @@ const Chatbox = () => {
       <main className={style.member_chat_container}>
       <section className={style.chat_container}>
         <Welcomechat clubname={"gamynt"}/>
-
-hello from chahter
+        <Message/>
+        <Message/>
+        <Message/>
+        <Message/>
+        <Message/>
+        <Message/>
+        <Message/>
+        <Message/>
+        <Message/>
 <Inputbox/>
         </section> 
       <Memberstatus />

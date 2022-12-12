@@ -4,15 +4,14 @@
 .send_message_input{
     padding: 0.3rem;
     border-radius: 0.3rem;
-    // position: absolute !important;
+    border: 2px solid rgba(238, 238, 238, 0.416);
+    background-color: black;
+    width: 100%;
+
+    margin-top: auto;
     position: sticky;
     bottom: 0px;
-    border: 2px solid rgba(238, 238, 238, 0.416);
-    width: 100%;
-    background-color: black;
     @include flex_box();
-    margin-top: auto;
-    float: inline-end;
     label{
         @include flex_box();
     }
@@ -49,6 +48,49 @@
         cursor: pointer;
         &:hover{
             transform: rotate(360deg) scale(1.1);
+        }
+    }
+}
+
+
+
+// message box 
+.message_box_main{
+    margin: 0.2rem;
+    padding: 0.3rem;
+    width: min(40rem , 90%);
+    word-break: keep-all;
+    background-color: rgba(186, 186, 186, 0.084);
+    border-radius: 0.3rem;
+    @include flex_box(row , flex-start , flex-start);
+    .sender_img{
+        width: 2rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+    }
+}
+.message_and_detail{
+  @include flex_box(column , flex-start , flex-start);
+    header{
+        @include flex_box(row , flex-start , center , 0.5rem);
+        p{
+            @include textwrap(1);
+            font-size: 0.9rem
+        }
+        span{
+            @include textwrap(1);
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+    }
+    div{
+        p{
+            line-height: 1.1rem;
+        }
+        img{
+            width: min(20rem , 100%);
+            border-radius: 0.2rem;
+            object-fit: contain;
         }
     }
 }

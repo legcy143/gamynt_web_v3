@@ -6,6 +6,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import { useRouter } from 'next/router';
 import Modal from '@mui/material/Modal';
 import Notifiaction from '../Notification/Notifiaction';
+import update from "../data/update.json"
 
 const TopNavbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -41,7 +42,7 @@ const TopNavbar = () => {
 
         <div className={style.notification} onClick={()=>{handleOpen()}}>
           <NotificationsIcon />
-          <p>34</p>
+          <p>{update.length}</p>
         </div>
 
         <div className={style.profile_icon}>
