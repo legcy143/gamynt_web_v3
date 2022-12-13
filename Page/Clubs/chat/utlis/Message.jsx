@@ -12,7 +12,7 @@ const Message = () => {
             </header>
             <div>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur reiciendis labore! Quaerat, quidem doloribus accusamus animi eius quo voluptates et ratione dicta expedita, amet corrupti ab illum laudantium possimus.</p>
-                <img src="/images/freefire.jpeg" alt="" />
+                {/* <img src="/images/freefire.jpeg" alt="" /> */}
             </div>
         </section>
     </main>

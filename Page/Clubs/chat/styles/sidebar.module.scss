@@ -1,10 +1,10 @@
 @import "../../../../styles/mixins";
 
 .sidebar_main{
-    flex: 0 0 18rem;
-    width: 18rem;
+    flex: 0 0 20rem;
+    width: 20rem;
     display: grid;
-    grid-template-columns: 4.2rem 13.5rem;
+    grid-template-columns: 4.3rem 15.7rem;
     gap: 0.3;
     height: 100%;
     overflow-y: hidden;
@@ -20,7 +20,7 @@
     transition: 0.30s ease;
 }
 .club_list{
-    @include flex_box(column , flex- , center , 1rem);
+    @include flex_box(column , flex , center , 1rem);
     div{
         width: 80%;
         aspect-ratio: 1/1;
@@ -52,7 +52,7 @@
 .sidebar_container{
     overflow-y: auto;
     @include scrollbar(0px , 0px);
-    background-color: rgb(41, 41, 41);
+    background-color: #282832;
     transition: 0.30s ease;
 }
 .club_logo{
@@ -61,7 +61,8 @@
     z-index: 10;
     padding: 0.3rem;
     @include flex_box($gap:0.1rem);
-    background-color: rgb(42, 42, 42);
+    background-color: #0d0d0d;
+    height: 3rem;
     img{
         padding: 0.2rem;
         width: 2.2rem;
@@ -71,10 +72,10 @@
     }
     h1{
         text-transform: capitalize;
-        width: 90%;
+        width: 100%;
         @include textwrap(1);
-        opacity: 0.9;
-        font-weight: 500;
+        // opacity: 0.9;
+        // font-weight: 500;
         font-size: 1.1rem;
     }
     svg{
@@ -110,9 +111,10 @@
         padding: 0.1rem 0.7rem;
         @include flex_box(row , flex-start , center , 0.5rem);
         list-style: none;
-        opacity: 0.7;
-        transition: 0.30s ease;
+        opacity: 0.9;
+        // transition: 0.30s ease;
         font-size: 1.1rem;
+        margin:0.3rem 0.4rem;
         cursor:pointer;
         li{
             @include textwrap();
@@ -121,6 +123,8 @@
         }
         &:hover:not(.active_channel){
             opacity: 1;
+            background-color:rgb(72, 72, 72);
+            border-radius:10px
         }
 
     }

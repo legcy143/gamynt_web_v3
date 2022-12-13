@@ -16,10 +16,10 @@ const Chatsidebar = () => {
         </header>
 
         {/* create new channel */}
-          <header className={style.create_channel}>
+          {/* <header className={style.create_channel}>
             <input type="text" placeholder='new channel' />
             <AddIcon />
-          </header>
+          </header> */}
 
         {/* channel list */}
 

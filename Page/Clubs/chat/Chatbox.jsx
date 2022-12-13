@@ -16,13 +16,13 @@ const Chatbox = () => {
         <Welcomechat clubname={"gamynt"}/>
         <Message/>
         <Message/>
+        {/* <Message/>
         <Message/>
         <Message/>
         <Message/>
         <Message/>
         <Message/>
-        <Message/>
-        <Message/>
+        <Message/> */}
 <Inputbox/>
         </section> 
       <Memberstatus />
