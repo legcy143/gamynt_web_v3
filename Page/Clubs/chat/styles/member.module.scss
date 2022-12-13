@@ -3,7 +3,7 @@
 
 .member_container_main{
     flex: 0 0 15rem;
-    width: 16rem;
+    width: 15rem;
     background-color: #282832;
     height: 100%;
     display: flex;
@@ -79,7 +79,6 @@
 
 @media (max-width:$tablet) {
     .member_container_main{
-        flex: 0 0 13rem;
-        width: 13rem;
+        flex-basis: 0;
     }
 }

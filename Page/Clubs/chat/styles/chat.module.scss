@@ -1,7 +1,7 @@
 @import "../../../../styles/mixins";
 
 .chat_container_main{
-    // width: 100%;
+    width: 100%;
 }
 
 .nav_top_chat{
@@ -19,11 +19,9 @@
     }
 }
 .member_chat_container{
-    height: calc(100% - 4rem);
-    width: 100%;
+    height: calc(100% - 3.1rem);
     @include flex_box(row , flex-start , flex-start);
 }
-
 
 
 
@@ -41,9 +39,12 @@
 
 
 
-// @media (max-width:$mobile) {
-//     .chat_container{
-//         border: 2px solid rgb(178, 14, 14);
-//     }
-    
-// }
+@media (max-width:$mobile) {
+    .nav_top_chat{
+        width: 100%;
+    }
+    .member_chat_container{
+        padding: 0.2rem 0.2rem 0rem;
+        gap: 0rem;
+    }
+}

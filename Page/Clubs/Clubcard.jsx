@@ -1,9 +1,11 @@
 import React from 'react'
 import style from "./styles/clubcard.module.scss"
 import VerifiedIcon from '@mui/icons-material/Verified';
+import { useRouter } from 'next/router';
 
 
 const Clubcard = (props) => {
+  let router = useRouter()
   return (
     <section className={style.club_card}>
   <header>
@@ -17,7 +19,7 @@ const Clubcard = (props) => {
     <p>{props.member} member</p>
     <p>{props.active} active</p>
   </div>
-  <button>join</button>
+  <button onClick={()=>{router.push("/club/chat")}}>join</button>
 </section>
   )
 }

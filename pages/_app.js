@@ -4,7 +4,6 @@ import '../styles/app.scss'
 import NavBar from '../components/Navbar/NavBar'
 import TopNavBar from '../components/Navbar/TopNavBar'
 import { useRouter } from 'next/router'
-import Head from "next/head"
 
 
 
@@ -14,18 +13,11 @@ function MyApp({ Component, pageProps }) {
   let path = router.pathname;
   // condition for not showing nav
   useEffect(() => {
-    if (path == "/club/chat") {
-      setisnav(1)
-    }
-    else{
-      setisnav(0)
-    }
+    {path == "/club/chat"?setisnav(1):setisnav(0)}
   }, [path])
   return (
     <>
-    <Head>
-      <meta name='theme-color' content='red'/>
-    </Head>
+   {/* <Provider store={store}> */}
     {
       isnav === 0?
     <main className='page_view'>
@@ -37,7 +29,8 @@ function MyApp({ Component, pageProps }) {
 </main>
        :
        <Component {...pageProps} />
-    }
+      }
+      {/* </Provider> */}
     </>
   )
 }

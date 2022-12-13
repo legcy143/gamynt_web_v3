@@ -45,6 +45,7 @@ html{
   font-size: 16px;
   user-select: none;
   height: 100%;
+  height: -webkit-fill-available;
 }
 body{
   font-family: 'Changa', sans-serif;
@@ -54,7 +55,7 @@ body{
   overflow-x: hidden;
   word-wrap: break-word;
   // word-break: break-all;
-  height:auto!important;
+  height:auto !important;
   min-height:100vh;
   display: flex;
   flex-direction: column;
