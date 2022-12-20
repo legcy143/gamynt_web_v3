@@ -21,6 +21,7 @@
 }
 .club_list{
     @include flex_box(column , flex , center , 1rem);
+    background-color:#202225;
     div{
         width: 80%;
         aspect-ratio: 1/1;
@@ -52,7 +53,7 @@
 .sidebar_container{
     overflow-y: auto;
     @include scrollbar(0px , 0px);
-    background-color: #282832;
+    background-color: #2F3136;
     transition: 0.30s ease;
 }
 .club_logo{
@@ -61,8 +62,10 @@
     z-index: 10;
     padding: 0.3rem;
     @include flex_box($gap:0.1rem);
-    background-color: #0d0d0d;
+    background-color: #2F3136;
+    box-shadow: rgba(0, 0, 0) -30px 15px 25px -20px;
     height: 3rem;
+    border-bottom-color:#fff;
     img{
         padding: 0.2rem;
         width: 2.2rem;
@@ -123,7 +126,7 @@
         }
         &:hover:not(.active_channel){
             opacity: 1;
-            background-color:rgb(72, 72, 72);
+            background-color:rgba(169, 169, 169,0.2);
             border-radius:10px
         }
 

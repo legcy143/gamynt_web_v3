@@ -10,8 +10,9 @@ const Topfeaturedgames = () => {
         <h2>Top featured games</h2>
       </header>
       <section className={style.crausal_container}>
-
-        <div className={style.item}>
+        <div style={{
+          margin: "1.2rem 0.2rem"
+        }} className={style.item}>
           <div>
           <p>free fire </p>
           < EastIcon/>

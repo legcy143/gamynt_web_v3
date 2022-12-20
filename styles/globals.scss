@@ -5,7 +5,7 @@
 
 :root{
   // --theme-bg: rgb(36, 49, 62);
-  --theme-bg: #0D1117;
+  --theme-bg: #030406;
   --theme-color: rgb(233, 233, 233);
   --theme-color-dark: rgb(168, 168, 168);
   --theme-box: rgb(12, 12, 13);
@@ -13,6 +13,19 @@
   // --theme-nav: #151511cb;
   --theme-nav: #000;
   --theme-card: #0d0d0d;
+  --gradient-shadow: linear-gradient(
+		45deg,
+		#fb0094,
+		#0000ff,
+		#00ff00,
+		#ffff00,
+		#ff0000,
+		#fb0094,
+		#0000ff,
+		#00ff00,
+		#ffff00,
+		#ff0000
+	);
   
   --black-rgb: 1, 1, 1;
 

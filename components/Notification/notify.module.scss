@@ -2,6 +2,8 @@
 
 
 .notification_main_container{
+    display:flex;
+    flex-direction:column;
     height: min(50rem , 70%);
     width: min(30rem , 90%);
     // padding: 0.5rem;
@@ -40,6 +42,9 @@
 }
 
 .clearnotification{
+    display:flex;
+    justify-content:flex-end;
+    float:right;
     border-radius: 0.3rem;
     padding: 0.1rem 0.5rem;
     backdrop-filter: blur(50px);
@@ -58,7 +63,7 @@
     margin: 0.7rem auto;
     border-radius: 0.4rem;
     background-color: #0d0d0d;
-    width: 94%;
+    width: 95%;
     @include flex_box(row , flex-start);
     // box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.8);
     img{
@@ -70,6 +75,7 @@
     div{
         display: flex;
         flex-direction: column;
+        justify-content:flex-end;
         p{
             font-weight: 400;
             font-size: 1rem;
