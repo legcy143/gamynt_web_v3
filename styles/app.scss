@@ -2,6 +2,8 @@
 
 .model{
 @include flex_box();
+background-color: rgba(0, 0, 0, 0.315);
+backdrop-filter: blur(0.5px);
 }
 
 .page_view{
@@ -10,6 +12,7 @@
     height: 100vh;
     @include scrollbar();
     .page_view_section{
+        animation: pageanime 1s ease;
         overflow-y: scroll;
         flex: 1 1 auto;
         @include scrollbar(0,0);
@@ -23,6 +26,15 @@
             padding: 4rem 0.4rem;
             padding-bottom: 4rem;
         }
+    }
+}
+@keyframes pageanime {
+    0%{
+
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
