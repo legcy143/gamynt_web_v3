@@ -2,11 +2,12 @@
 
 // input box ui 
 .send_message_input{
-    margin: 0rem auto;
+    margin: 15px auto;
+    // margin-right:-0.02px;
     padding: 0.3rem;
     border-radius: 10px;
     background-color: #40444B;
-    width: 97%;
+    width: 95%;
     margin-top: auto;
     position: sticky;
     bottom: -2px;
@@ -42,7 +43,7 @@
         &:last-child{
             transition: 0.30s ease;
             transform: rotate(-20deg);
-            color: rgba(var(--secondry-color-rgb),0.7);
+            // color: rgba(var(--secondry-color-rgb),0.7);
         }
         cursor: pointer;
         // &:hover{
@@ -55,7 +56,7 @@
 
 // message box 
 .message_box_main{
-    margin: 0.4rem;
+    margin: 0.6rem;
     padding: 0.3rem;
     width: min(80rem , 95%);
     word-break: keep-all;

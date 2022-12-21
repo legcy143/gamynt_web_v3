@@ -12,7 +12,6 @@ const Stories = () => {
         <img src="/images/freefire.jpeg" alt="free" />
         <p>lorem hu mai lorem</p>
         </div>
-
       </section>
 
       <div className={style.scroll_btn}> <ArrowForwardIosIcon/> </div>

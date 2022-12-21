@@ -4,7 +4,7 @@
     padding: 0.5rem;
     width: $post_container_width;
     border-radius: 0.5rem;
-    border: 3px solid rgb(47, 47, 47);
+    border: 0.3px solid rgb(47, 47, 47);
     @include flex_box(column , flex-start);
     textarea{
         // caret-color: rgb(92, 190, 255);

@@ -6,7 +6,7 @@ import Image from "next/image"
 const Topfeaturedgames = () => {
   return (
     <main className={style.top_featured_container}>
-      <header>
+      <header className={style.bg_game} >
         <h2>Top featured games</h2>
       </header>
       <section className={style.crausal_container}>

@@ -36,7 +36,7 @@
     }
 }
 .member_chat_container{
-    height: calc(100% - 4rem);
+    height: calc(100% - 3rem);
     width: 100%;
     @include flex_box(row , flex-start , flex-start);
 }

@@ -31,12 +31,16 @@ const TopNavbar = () => {
       <section className={style.profile_section}>
         <div className={style.coin_diamond_container}>
           <div className={style.coin_nav}>
+            <img style={{
+              width:"30px"
+            }} src={"/coin.gif"} />
             <p>23</p>
-            <input type="range" name="points" min="0" max="100" value={0} />
           </div>
           <div className={style.coin_nav}>
+          <img style={{
+              width:"30px"
+            }} src={"/diamond.gif"} />
             <p>23</p>
-            <input type="range" name="points" min="0" max="100" value={0} />
           </div>
         </div>
 

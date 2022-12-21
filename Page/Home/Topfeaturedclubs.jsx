@@ -6,9 +6,18 @@ import GroupsIcon from '@mui/icons-material/Groups';
 const Topfeaturedclubs = () => {
   return (
   <main className={style.top_featured_container}>
-    <header>
-      <h2>top featured clubs</h2>
-    </header>
+<header >
+  <h2  style={{
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    gap:"5px",
+    marginBottom:"-50px"
+}}>Top Feadtured Clubs  <img src={"/club.gif"} style={{
+    width:"100px",
+  }} />
+</h2>
+</header>
 
       <section className={style.crausal_container}>
 

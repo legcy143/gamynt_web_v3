@@ -6,8 +6,16 @@ import style from "./styles/leader.module.scss"
 const TopPlayer = () => {
   return (
     <main className={style.top_leaderboard_main}>
-<header>
-  <h2>top player of the weak</h2>
+<header >
+  <h2  style={{
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    gap:"10px"
+}}>top player of the weak   <img src={"/trophy.gif"} style={{
+    width:"50px",
+  }} />
+</h2>
 </header>
 <section className={style.crausal_container}>
     <fieldset className={style.player_box}>

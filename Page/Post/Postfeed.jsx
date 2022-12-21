@@ -27,8 +27,8 @@ const Postfeed = () => {
           </section>
         </header>
 <section className={style.post_action}>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, doloribus molestias? Quod, voluptas. Inventore ab nostrum sapiente non odio accusantium iste pariatur aperiam beatae nobis modi dolorum facere, consequuntur natus.</p>
   <img src="/images/freefire.jpeg" alt="" />
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, doloribus molestias? Quod, voluptas. Inventore ab nostrum sapiente non odio accusantium iste pariatur aperiam beatae nobis modi dolorum facere, consequuntur natus.</p>
   <div>
     <LikeOutline />
     <CommentIcon/>

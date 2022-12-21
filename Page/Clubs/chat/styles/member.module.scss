@@ -3,17 +3,15 @@
 
 .member_container_main{
     flex: 0 0 15rem;
-    width: 16rem;
-    background-color: #2F3136;
     width: 15rem;
-    padding: 10px;
-    // background-color: #282832;
+    background-color: #202225;
     height: 100%;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     @include scrollbar(0px , 0px);
     transition: 0.30s ease ;
+    // padding:10px;
 }
 .search_member_input{
     padding: 0.3rem;
@@ -57,13 +55,13 @@
 
 
 .member_container{
+    padding:10px;
     h2{
         padding: 0.2rem;
         text-transform: capitalize;
         font-size: 1.1rem;
-        font-weight: 100;
+        font-weight: 400;
         // @include textgrad()
-        opacity: 0.8;
     }
     .member{
         padding: 0.5rem;
@@ -74,7 +72,6 @@
             border-radius: 50%;
         }
         p{
-            opacity: 0.8;
             width: 100%;
             @include textwrap(1)
         }
