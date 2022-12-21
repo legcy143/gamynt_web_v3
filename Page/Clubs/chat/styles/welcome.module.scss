@@ -7,7 +7,9 @@
         word-break: keep-all;
         h1{
             font-size: 2.4rem;
+            line-height: 2.5rem;
             color: rgb(255, 255, 255);
+            @include textgrad();
         }
         p{
             width: 85%;
