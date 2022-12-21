@@ -20,7 +20,7 @@ const TopNavbar = () => {
 
       <section className={style.page_name}>
         <h2>{path.slice(1, 15)}</h2>
-        <h1>{path === "/" ? "home" : path.slice(1, 15)}</h1>
+        <h1>{path === "/" ? "home" : path.slice(1, 12)}</h1>
       </section>
 
       <section className={style.search_box}>
