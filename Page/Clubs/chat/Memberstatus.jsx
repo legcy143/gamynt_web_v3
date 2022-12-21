@@ -5,14 +5,14 @@ import SearchIcon from '@mui/icons-material/Search';
 const Memberstatus = () => {
   return (
     <main className={style.member_container_main}>
-      <header className={style.search_member_input}>
+      {/* <header className={style.search_member_input}>
         <input type="text" placeholder='search'/>
         <SearchIcon/>
-      </header>
-      <header className={style.total_member}>
+      </header> */}
+      {/* <header className={style.total_member}>
         <h1>total member - </h1>
         <h2>34</h2>
-      </header>
+      </header> */}
 
       <section className={style.member_container}>
         <h2>founders - 4</h2>

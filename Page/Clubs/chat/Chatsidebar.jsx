@@ -3,7 +3,7 @@ import style from "./styles/sidebar.module.scss"
 import Clubnav from './utlis/Clubnav'
 import ArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import AddIcon from '@mui/icons-material/Add';
-
+import TagIcon from '@mui/icons-material/Tag';
 const Chatsidebar = () => {
   return (
     <main className={style.sidebar_main}>
@@ -24,12 +24,12 @@ const Chatsidebar = () => {
         {/* channel list */}
 
         <main className={style.channel_list}>
-          <ul>#<li>genrel chat</li></ul>
-          <ul>#<li>diccusion hub</li></ul>
-          <ul>#<li>group hub</li></ul>
-          <ul>#<li>annoucment</li></ul>
-          <ul>#<li>genrel</li></ul>
-          <ul>#<li>genrel</li></ul>
+          <ul><TagIcon/><li>genrel chat</li></ul>
+          <ul><TagIcon/><li>diccusion hub</li></ul>
+          <ul><TagIcon/><li>group hub</li></ul>
+          <ul><TagIcon/><li>annoucment</li></ul>
+          <ul><TagIcon/><li>genrel</li></ul>
+          <ul><TagIcon/><li>genrel</li></ul>
         </main>
 
       </section>
