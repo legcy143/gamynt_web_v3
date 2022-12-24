@@ -2,17 +2,24 @@
 
 .model{
 @include flex_box();
-background-color: rgba(0, 0, 0, 0.315);
-backdrop-filter: blur(0.5px);
 }
-
+.no-scroll{
+    overflow: hidden;
+}
+.modal_main{
+    margin: 2rem;
+    padding: 4rem;
+    border: 5px solid #eee;
+    position: fixed;
+    z-index: 200;
+    background-color: rgb(16, 13, 13);
+}
 .page_view{
     display: flex;
     gap: 1.5rem;
     height: 100vh;
     @include scrollbar();
     .page_view_section{
-        animation: pageanime 1s ease;
         overflow-y: scroll;
         flex: 1 1 auto;
         @include scrollbar(0,0);
@@ -26,15 +33,6 @@ backdrop-filter: blur(0.5px);
             padding: 4rem 0.4rem;
             padding-bottom: 4rem;
         }
-    }
-}
-@keyframes pageanime {
-    0%{
-
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
     }
 }
 
