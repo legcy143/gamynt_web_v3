@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from "./styles/sidebar.module.scss"
 import Clubnav from './utlis/Clubnav'
 import ArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import AddIcon from '@mui/icons-material/Add';
 import TagIcon from '@mui/icons-material/Tag';
+import { useSelector } from 'react-redux';
 const Chatsidebar = () => {
-  return (
-    <main className={style.sidebar_main}>
+  let handlenav = useSelector((store)=>store.handlenav)
+  useEffect(() => {
+  console.log("useeffect hu hua")
+  console.log( "in effect", handlenav)
+}, [handlenav])
+return (
+  <main className={style.sidebar_main}>
       <Clubnav />
       <section className={style.sidebar_container}>
         <header className={style.club_logo}>
