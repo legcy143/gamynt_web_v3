@@ -6,7 +6,7 @@ const Transfer = () => {
   return (
     <main className={style.moneyaction_container_main}>
     <Walletnav tittle={"transfer"}/>
-<h1>transfer</h1>
+    <h1 style={{textAlign:"Center"}}>comming soon</h1>
   </main>
   )
 }
