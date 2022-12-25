@@ -13,7 +13,8 @@
   // --theme-nav: #151511cb;
   --theme-nav: #000;
   --theme-card: #0d0d0d;
-  --wallet-grad:linear-gradient(165deg , rgba(0, 128, 0, 0.562) , black, black);
+  // --wallet-grad:linear-gradient(165deg , rgba(0, 128, 0, 0.562) , black, black);
+  --wallet-grad:linear-gradient(165deg , rgba(var(--primary-color-rgb) , 0.562) , black, black);
   --gradient-shadow: linear-gradient(
 		45deg,
 		#fb0094,
