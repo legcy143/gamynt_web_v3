@@ -5,7 +5,7 @@ import Authentication from '../Page/Account/Authentication'
 
 // if login is true then render profile component else render authentication component
 const account = () => {
-    const [logincheck, setlogincheck] = new useState(false)
+    const [logincheck, setlogincheck] = new useState(true)
 
   return (
     <main>

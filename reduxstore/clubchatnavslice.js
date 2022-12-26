@@ -1,25 +1,30 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = []
-const sidebarnav = []
 
 const navslice = createSlice({
     name:'handlenav',
     initialState,
     reducers:{
-        opennav(state){
-            console.log("ok open")
-            {
-                console.log("state =>  ",sidebarnav)
-            }
-            sidebarnav.push("hjell in sidebar")
+        opennav(state , action){
+            console.log(action)
+            console.log(action.payload)
+            state.push("sidebar")
         },
-        closenav(){
-            console.log("ok close")
+        opensidebar(state){
+            state.push("sidebar")
+        },
+        openmember(state){
+            state.push("member")
+        },
+        closenav(state , action){
+            console.log("on remove me")
+            // state.pop()
+            return state.filter((item)=>item._id != action.payload);
         }
     }
 })
 
-export const { opennav , closenav } = navslice.actions
+export const { opennav , closenav ,opensidebar ,openmember } = navslice.actions
 
 export default navslice.reducer
