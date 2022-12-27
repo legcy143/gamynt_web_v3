@@ -10,8 +10,10 @@ const Chatnav = () => {
   let dispatch = useDispatch()
   let handlenav = useSelector((store)=>store.handlenav)
   const sidebarmenuhandle = ()=>{
+    dispatch(opensidebar())
     {
-      handlenav.includes("sidebar") === true ? dispatch(closenav()) : dispatch(opensidebar())
+      // handlenav.includes("sidebar") === true ? dispatch(closenav()) : dispatch(opensidebar())
+
     }
    
   }

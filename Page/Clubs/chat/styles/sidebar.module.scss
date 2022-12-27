@@ -1,6 +1,6 @@
 @import "../../../../styles/mixins";
 
-.sidebar_main{
+.sidebar_main , .open_nav{
     flex: 0 0 20rem;
     // width: 20rem;
     display: grid;
@@ -10,9 +10,6 @@
     overflow-y: hidden;
     border-radius: 0.2rem;
     transition: 0.30s ease;
-}
-.open_nav{
-    flex: 0 0 20rem;
 }
 
 // club side main continer width

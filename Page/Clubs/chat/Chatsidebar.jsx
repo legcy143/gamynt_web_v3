@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import style from "./styles/sidebar.module.scss"
 import Clubnav from './utlis/Clubnav'
 import ArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -12,14 +12,16 @@ const Chatsidebar = () => {
   let handlenav = useSelector((store)=>store.handlenav)
   let menumainref = useRef();
 
+  const [classtoggle, setclasstoggle] = new useState(style.sidebar_main)
+
   useEffect(() => {
-    // .open_nav class of toggle menu .classList.toggle("mystyle")
     console.log("handle nav =>" , handlenav)
-    {handlenav.includes("sidebar") == true && menumainref.current.classList.toggle(style.open_nav)}
+    // {handlenav.includes("sidebar") == true ? menumainref.current.classList.toggle(style.open_nav):false}
+    {handlenav.includes("sidebar") == true ? setclasstoggle(style.open_nav):setclasstoggle(style.sidebar_main)}
 }, [handlenav])
 
 return (
-  <main  className={style.sidebar_main} ref={menumainref}>
+  <main  className={classtoggle}>
       <Clubnav />
       <section className={style.sidebar_container}>
         <header className={style.club_logo}>

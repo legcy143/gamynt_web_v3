@@ -12,9 +12,22 @@ const navslice = createSlice({
             state.push("sidebar")
         },
         opensidebar(state){
-            state.push("sidebar")
+            // state.push("sidebar")
+            if(state.includes("sidebar")){
+                state.splice(0)
+                return
+            }
+            else{
+                console.log("initialState",initialState)
+                state.push("sidebar")
+            }
         },
         openmember(state){
+            // state.push("member")
+            if(state.includes("member")){
+                state.splice(0)
+                return 
+            }
             state.push("member")
         },
         closenav(state , action){
