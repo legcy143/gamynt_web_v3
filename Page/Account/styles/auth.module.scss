@@ -3,12 +3,16 @@
 .auth_main_container{
     margin: 0rem auto;
     height: calc(100vh - var(--nav-height) - 2rem);
-    @include flex_box()
+    // @include flex_box();
+    display: grid;
+    place-items: center;
+    overflow-y: auto;
+    @include scrollbar();
 }
 .auth_card_ui{
     border-radius: 0.5rem;
     transition: 0.30s ease;
-    width: min(25rem ,80%);
+    width: min(25rem ,90%);
     height: max-content;
     position: relative;
     overflow: hidden;
@@ -20,7 +24,7 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background: linear-gradient( 0deg,transparent , var(--secondry-color) , var(--secondry-color));
+        background: linear-gradient(0deg , rgba(var(--primary-color-rgb) , 0.562) , black);
         pointer-events: none;
         // transform: rotate(45deg) ;
         transform: rotate(0deg);    
@@ -48,9 +52,20 @@
     padding: 0.5rem;
     border-radius: 0.5rem;
     z-index: 10;
-    background-color: var(--theme-card);
+    // background-color: var(--theme-card);
+    background: linear-gradient(0deg , rgba(0 , 0 , 0 , .2) , black);
+backdrop-filter: blur(150px);
     header{
+        text-transform: capitalize;
         @include flex_box();
+        margin: 1rem auto;
+    img{
+        width: min(3rem , 30%);
+    }
+    h1{
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
     }
     nav{
         list-style: none;
@@ -90,7 +105,7 @@
         padding: 0.3rem;
         background-color: transparent;
         backdrop-filter: blur(20px);
-        background-color:rgba(var(--secondry-color-rgb) , 0.4);
+        background-color:rgba(var(--primary-color-rgb) , 0.4);
         width: min(10rem , 90%);
     }
 }
@@ -102,6 +117,7 @@
         opacity: 1;
     }
 }
+
 
 .form_input_box{
     width: 90%;

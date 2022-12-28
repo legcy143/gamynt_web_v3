@@ -18,9 +18,10 @@ const Authentication = () => {
             <section className={style.auth_card_ui}>
                 <section className={style.auth_card}>
                     <header>
-                        <h1>
-                        gamynt login
-                        </h1>
+                <img src="/logo_mini.png" alt="" />
+                <h1>
+                authentication
+                </h1>
                     </header>
                     <nav>
                         <li className={`${navnumber == 0 && style.active}`} onClick={()=>{setnavnumber(0)}}>Sign up</li>
