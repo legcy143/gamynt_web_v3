@@ -7,9 +7,7 @@ const navslice = createSlice({
     initialState,
     reducers:{
         opennav(state , action){
-            console.log(action)
-            console.log(action.payload)
-            state.push("sidebar")
+            state.push("opennav")
         },
         opensidebar(state){
             if(state.includes("sidebar")){

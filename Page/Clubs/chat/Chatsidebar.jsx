@@ -15,7 +15,6 @@ const Chatsidebar = () => {
   const [classtoggle, setclasstoggle] = new useState(style.sidebar_main)
 
   useEffect(() => {
-    console.log("handle nav =>" , handlenav)
     // {handlenav.includes("sidebar") == true ? menumainref.current.classList.toggle(style.open_nav):false}
     {handlenav.includes("sidebar") == true ? setclasstoggle(style.open_nav):setclasstoggle(style.sidebar_main)}
 }, [handlenav])

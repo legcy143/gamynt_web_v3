@@ -10,7 +10,6 @@ const Memberstatus = () => {
   const [classtoggle, setclasstoggle] = new useState(style.member_container_main)
 
   useEffect(() => {
-    console.log("handle nav =>" , handlenav)
     {handlenav.includes("member") == true ? setclasstoggle(style.open_member):setclasstoggle(style.member_container_main)}
 }, [handlenav])
 

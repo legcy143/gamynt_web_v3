@@ -1,9 +1,11 @@
 import React from 'react'
 import style from "./styles/tournamentcard.module.scss"
 import GroupIcon from '@mui/icons-material/Group';
+import { useRouter } from 'next/router';
 
 
 const Tournamentcard = () => {
+  let router = useRouter()
   return (
     <main className={style.tournament_item}>
     <div className={style.image_space}>
@@ -21,7 +23,7 @@ const Tournamentcard = () => {
      <p> <img src="/util/member.png" alt="" width={35} height={35}/>7/14</p>
      <p><GroupIcon/> duo</p>
       </div>
-      <button>join tournament</button>
+      <button onClick={()=>{router.push("/tournaments/register")}}>join tournament</button>
       </main>
 
   )
