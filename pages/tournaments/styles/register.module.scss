@@ -80,8 +80,9 @@
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     @include flex_box(column , flex-start);
-    flex-wrap: wrap;
     text-transform: capitalize;
+    overflow-y: auto;
+    @include scrollbar();
     header{
         width: 100%;
         text-align: center;
@@ -100,7 +101,10 @@
         div{
             border-radius: 0.5rem;
             padding: 0.5rem;
-            background: var(--wallet-grad);
+            background:
+            linear-gradient(165deg , rgba(var(--primary-color-rgb) , 0.4) , rgba(18, 18, 18, 0.744), rgb(9, 9, 9));
+
+            box-shadow: 1px 4px 10px rgba(var(--primary-color-rgb) , 0.2);
             b{
                 font-size: 1rem;
                 color: red;
@@ -130,6 +134,6 @@
     }
     .tournament_info_container{
         width: 100%;
-
+        overflow: visible;
     }
 }

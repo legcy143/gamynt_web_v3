@@ -1,11 +1,13 @@
 import React from 'react'
 import style from "./styles/register.module.scss"
+import { useRouter } from 'next/router'
 
 const Register = () => {
+    let router = useRouter()
   return (
     <main className={style.register_main_page_container}>
        
-            <button className={style.back_btn}>back</button>
+            <button onClick={()=>{router.back(-1)}} className={style.back_btn}>back</button>
 <main className={style.hero_section}>
 
         <section className={style.organizer_info}>
