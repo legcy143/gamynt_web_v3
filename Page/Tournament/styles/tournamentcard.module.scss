@@ -1,9 +1,10 @@
+@import "../../../styles/mixins";
+
 .tournament_item{
     border-radius: 0.5rem;
     overflow: hidden;
     background-color: var(--theme-card);
     box-shadow: 0px 7px 20px rgb(0, 0, 0);
-    
     button{
         @include primarybtn();
         background-color: var(--primary-color);

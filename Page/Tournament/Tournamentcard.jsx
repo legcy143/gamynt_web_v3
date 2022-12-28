@@ -5,7 +5,7 @@ import GroupIcon from '@mui/icons-material/Group';
 
 const Tournamentcard = () => {
   return (
-    <div className={style.tournament_item}>
+    <main className={style.tournament_item}>
     <div className={style.image_space}>
       <img src="/images/freefire.jpeg" alt="" width={200} height={200}/>
       <span>2 thu 2:50 pm</span>
@@ -22,7 +22,7 @@ const Tournamentcard = () => {
      <p><GroupIcon/> duo</p>
       </div>
       <button>join tournament</button>
-      </div>
+      </main>
 
   )
 }
