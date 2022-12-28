@@ -13,9 +13,10 @@ function MyApp({ Component, pageProps }) {
   const [isnav, setisnav] = useState(1)
   let router = useRouter()
   let path = router.pathname;
+  let hidepath = ["/club/chat" , "/tournaments/register"]
   // condition for not showing nav
   useEffect(() => {
-    {path == "/club/chat"?setisnav(1):setisnav(0)}
+    {path ==="/tournaments/register" ?setisnav(1):setisnav(0)}
   }, [path])
   return (
     <>
