@@ -1,0 +1,62 @@
+@import "../../../../styles/mixins";
+
+
+.info_container{
+    header{
+        width: 100%;
+        h1{
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+    }
+    // info container section
+    section{
+        padding: 0.5rem;
+        width: 100%;
+        // display: flex;
+        @include flex_box();
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        div{
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            background:
+            linear-gradient(165deg , rgba(var(--primary-color-rgb) , 0.4) , rgba(18, 18, 18, 0.744), rgb(9, 9, 9));
+
+            box-shadow: 1px 4px 10px rgba(var(--primary-color-rgb) , 0.2);
+            p{
+                @include flex_box(row , flex-start);
+                svg{
+                    padding: 0.05rem;
+                }
+            }
+            b{
+                font-size: 1rem;
+                color: red;
+            }
+        }
+        .big_info_div{
+            width: calc(90% + 1rem);
+        }
+        .mini_info_div{
+            width: 45%;
+        }
+    }
+}
+
+.register_btn{
+    padding: 0.5rem;
+    width: min(10rem , 90%);
+    margin: 1rem auto;
+}
+
+
+@media  (max-width:$mobile) {
+    .organizer_info{
+        width: 100%;
+    }
+    .tournament_info_container{
+        width: 100%;
+        overflow: visible;
+    }
+}
