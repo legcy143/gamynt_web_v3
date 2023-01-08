@@ -15,11 +15,11 @@ const ClubAnyalystic = () => {
                 <p>450</p>
             </div>
             <div className={style.container}>
-                <h2>tournament pending</h2>
+                <h2>tournament active</h2>
                 <p>12</p>
             </div>
             <div className={style.container}>
-                <h2>tournament played</h2>
+                <h2>tournament completed</h2>
                 <p>250</p>
             </div>
         </section>
