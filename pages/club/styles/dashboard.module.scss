@@ -11,8 +11,8 @@
 .main_nav , .close_nav{
     width: 0rem;
     flex:0 0 0rem;
-    background-color: rgba(var(--primary-color-rgb) , 0.7);
-    backdrop-filter: blur(30px);
+    background-color: rgba(var(--primary-color-rgb) , 0.5);
+    backdrop-filter: blur(50px);
     @include flex_box(column,flex-start,center,0.1rem);
     height: 100%;
     overflow-y: scroll;
@@ -39,6 +39,7 @@
         }
      }
      ul{
+        text-transform: capitalize;
         margin-left: auto;
         @include flex_box(row , flex-start);
         // height: 3rem;
@@ -82,11 +83,20 @@
     flex:0 0 16rem;
 }
 .close_nav_icon{
+    padding:0rem 0.5rem;
     @include flex_box();
-    width: 2rem;
+    width: 100%;
     margin: 0.5rem;
     margin-left: auto;
-    display: none;
+    svg{
+        width: 2rem;
+        height: 2rem;
+        &:last-child{
+            visibility: hidden;
+            margin-left: auto;
+        }
+
+    }
 }
 @media (max-width:750px) {
     .close_nav{
@@ -98,7 +108,13 @@
         flex:0 0 16rem;
     }
     .close_nav_icon{
-        display: flex;
+        svg{
+            width: 2rem;
+            height: 2rem;
+            &:last-child{
+                visibility: visible;
+            }
+        }
     }
     .main_nav , .close_nav{
         height: 100%;
@@ -132,7 +148,12 @@
     backdrop-filter: blur(50px);
     padding: 0rem 0.5rem;
     @include flex_box(row,space-between);
+    z-index: 10;
 }
 .menu_icon{
     @include flex_box();
+    svg{
+        width: 2rem;
+        height: 2rem;
+    }
 }

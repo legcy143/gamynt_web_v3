@@ -6,6 +6,9 @@
 
 .member_status {
     // display: grid;
+    padding-top: 5rem;
+    margin: 2rem 0rem;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -15,51 +18,53 @@
     @include mobile() {
         gap: 1rem;
     };
+    header{
+        top: 1rem;
+        position: absolute;
+        font-size: clamp(1.1rem , calc(1vw + 1rem) , 2rem);
+        font-weight: 600;
+        letter-spacing: 1px;
+        @include textgrad();
+    }
 }
 
 .container {
     // max-width: 12rem;
-    // width: 12rem;
-    height: 7.6rem;
     border-radius: 0.5rem;
     box-shadow: 5px 5px 25px -2px rgb(var(--primary-color-rgb), 0.25);
     border: 1px solid rgb(var(--primary-color-rgb), 0.05);
     ;
-    // aspect-ratio: 1/1;
     padding: 0.2rem;
     background-color: rgba(151, 151, 151, 0.297);
     transition: 0.30s ease;
     cursor: pointer;
-    @include flex_box(column , flex-start , center , 0.2rem);
+    @include flex_box(column , center , center , 0.2rem);
     text-transform: capitalize;
     h2{
-        font-weight: 500;
-        font-size: 1.2rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        @include flex_box(column);
+        font-size: 1rem;
+        svg{
+            width: 3rem;
+            height: 3rem;
+        }
     }
     p{
         line-height: 2.5rem;
         opacity: 0.8;
         font-weight: 600;
         font-size: 2rem;
-        margin-top: auto;
+        // margin-top: auto;
     }
 
     &:hover {
         background-color: rgb(var(--primary-color-rgb), 0.4);
     }
     flex: 1  1  10rem;
+    aspect-ratio: 1/1;
+    max-height: 10rem;
     @include mobile400() {
         flex: 1  1  7rem;
-        h2{
-            font-weight: 500;
-            font-size: 1rem;
-        }
-        p{
-            line-height: 2.5rem;
-            opacity: 0.8;
-            font-weight: 600;
-            font-size: 1.5rem;
-            margin-top: auto;
-        }
     };
 }
