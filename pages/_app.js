@@ -24,7 +24,12 @@ function MyApp({ Component, pageProps }) {
       case ("/club/chat"):
         setisnav(1);
         break;
+
       case ("/tournaments/register"):
+        setisnav(1);
+        break;
+
+      case ("/club/dashboard"):
         setisnav(1);
         break;
     
