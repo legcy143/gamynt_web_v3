@@ -35,7 +35,7 @@ const Club = () => {
           <ul onClick={()=>{setpageroute(2)}} className={`${pageroute==2 && style.active_link}`}>
             explore
           </ul>
-          <ul onClick={()=>{setpageroute(3)}} className={`${pageroute==3 && style.active_link}`}>
+          <ul onClick={()=>{router.push("/club/createclub")}}>
             <li>club</li>
           </ul>
           <ul onClick={()=>{router.push("/club/dashboard")}}>
