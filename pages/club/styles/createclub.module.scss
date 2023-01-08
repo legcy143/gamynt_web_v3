@@ -57,7 +57,7 @@
 
     label {
         width: 100%;
-        aspect-ratio: 16/9;
+        aspect-ratio: 5/2;
         border-radius: 0.5rem;
         border: 2px dashed rgba(238, 238, 238, 0.5);
     }
@@ -84,11 +84,11 @@
     width: 100%;
 
     div {
-        margin: 1rem 0rem;
+        margin: 2rem 0rem;
         @include flex_box();
         p {
             text-transform: capitalize;
-            padding: 0.3rem;
+            padding: 0rem 0.2rem;
             width: min(15rem, 90%);
             @include textwrap();
             font-weight: 500;
@@ -98,11 +98,11 @@
 
         input,
         textarea {
+            padding: 0rem 0.1rem 0.4rem;
             font-size: 1rem;
             outline: none;
             border: none;
             border-bottom: 2px solid rgba(var(--primary-color-rgb));
-            padding: 0.5rem;
             width: 97%;
             background-color: inherit;
         }
@@ -126,4 +126,13 @@
             }
         }
     }
+    .image_banner {
+        width: 95%;
+    }
+    .image_logo {
+        label {
+            bottom: -3rem;
+            width: min(6rem, 50%);
+        }
+        }
 }
