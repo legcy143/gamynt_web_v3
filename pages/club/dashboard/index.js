@@ -1,15 +1,35 @@
 import React, { useEffect, useState } from 'react'
-import { Fragment } from 'react'
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import style from "./styles/dashboard.module.scss"
-import ClubAnyalystic from "../../Page/dashboard/ClubAnyalystic"
+import style from "./styles/dashboard.module.scss";
+import Club from "../../../Page/dashboard/Club";
+import ClubAnyalystic from "../../../Page/dashboard/ClubAnyalystic";
+import Tournament from '../../../Page/dashboard/Tournament';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from 'next/router';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Dashboard = () => {
-    let router = useRouter()
+    let router = useRouter();
+    const [pageroute, setpageroute] = useState(2)
+    const [pagecompo, setpagecompo] = useState("loading .. ")
     const [sidenav, setsidenav] = useState(style.close_nav)
+    useEffect(() => {
+      switch (pageroute) {
+        case 1:
+          setpagecompo( <ClubAnyalystic/>)
+          break;
+        case 2:
+          setpagecompo( <Tournament/>)
+          break;
+        case 3:
+          setpagecompo( <Club/>)
+          break;
+      
+        default:
+          setpagecompo("page not found")
+          break;
+      }
+    }, [pageroute])
     // const [sidenav, setsidenav] = useState(style.main_nav)
     // let todaydate = new Date().toLocaleString()
     // console.log(todaydate)
@@ -27,15 +47,15 @@ const Dashboard = () => {
                 <img src="/images/freefire.jpeg" alt="" />
                 <h1>gamer hub</h1>
             </header>
-            <ul className={style.active_menu}>
+            <ul onClick={()=>{setpageroute(1),setsidenav(style.close_nav)}} className={`${pageroute==1 && style.active_menu}`}>
                 <DashboardIcon/>
-                <li>dashboard</li>
+                <li>home</li>
             </ul>
-            <ul>
+            <ul onClick={()=>{setpageroute(2),setsidenav(style.close_nav)}} className={`${pageroute==2 && style.active_menu}`}>
                 <DashboardIcon/>
                 <li>tournament</li>
             </ul>
-            <ul>
+            <ul onClick={()=>{setpageroute(3),setsidenav(style.close_nav)}} className={`${pageroute==3 && style.active_menu}`}>
                 <DashboardIcon/>
                 <li>club</li>
             </ul>
@@ -51,7 +71,8 @@ const Dashboard = () => {
             </nav>
                 <section>
                     {/* file changes here */}
-                    <ClubAnyalystic/>
+                    {/* <ClubAnyalystic/> */}
+                    {pagecompo}
                     </section>
         </section>
     </main>

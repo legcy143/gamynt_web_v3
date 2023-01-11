@@ -1,0 +1,28 @@
+@import "../../../styles/mixins";
+
+.tournament_container_main{
+section{
+    padding: 0.5rem;
+    header{
+        h1{
+            font-size: 1.3rem;
+            font-weight: 500;
+            @include textgrad();
+            text-transform: capitalize;
+        }
+    }
+}
+}
+
+// .recent_tournament{
+   
+// }
+// .history_tournament{
+
+// }
+
+
+.card{
+    padding: 2rem;
+    border: 1px solid #eee;
+}
