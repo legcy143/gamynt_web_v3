@@ -10,10 +10,18 @@
     align-items: $align;
     gap: $gap;
 }
+@mixin flexBox($direction:row , $justify:center , $align:center , $gap:0.5rem){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
 
-@mixin gridwrap($width:200px){
+@mixin gridwrap($width:200px ,$gap:0.5rem , $maxwidth:1fr){
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax($width , 1fr));
+    grid-template-columns: repeat(auto-fit , minmax($width , $maxwidth));
+    gap:$gap;
 }
 
 @mixin textgrad($from:to bottom , $bg1:rgb(253, 255, 254) , $bg2:rgb(106, 107, 107)){

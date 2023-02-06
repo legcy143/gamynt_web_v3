@@ -1,0 +1,73 @@
+@import "../../../styles/mixins";
+
+.livestreamcard{
+    background-color: rgba(51, 49, 84, 0.749);
+    // width: 25rem;
+    max-width: 25rem;
+    // flex: 0 0 25rem;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    @include flexBox(column , center ,flex-start);
+    img{
+        max-width: 100%;
+    }
+}
+.image_card{
+    border-radius: 0.5rem;
+    width: 100%;
+    aspect-ratio: 2/1;
+    position: relative;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+    }
+    span , small{
+        padding: 0.2rem 1rem;
+        position: absolute;
+        width: fit-content;
+        border-radius: 11rem;
+        backdrop-filter: blur(5px);
+    }
+    span{
+        bottom: 0.5rem;
+        right: 0.5rem;
+        background-color: rgba(255, 0, 0, 0.70);
+        @include flexBox();
+    }
+    small{
+        top: 0.5rem;
+        left: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.50);
+    }
+}
+.liveinfo{
+    width: 100%;
+    position: relative;
+    @include flexBox();
+    img{
+        width: 3.5rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    div{
+        @include flexBox(column , center ,flex-start);
+        width: 100%;
+        height: 5rem;
+        h1{
+            @include textwrap(2);
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            font-weight: 500;
+        }
+        small{
+            display: block;
+            @include textwrap(1);
+            font-weight: 300;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+    }
+}

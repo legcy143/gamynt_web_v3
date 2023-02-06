@@ -131,6 +131,8 @@
     @include flex_box(column, $justify: flex-start);
     width: fit-content;
     flex: 0 0 fit-content;
+    flex: 0 0 fit-content;
+    width: 2rem;
 
     li {
         list-style: none;

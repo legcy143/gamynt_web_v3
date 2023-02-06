@@ -1,0 +1,82 @@
+@import "../../../styles/mixins";
+
+.top_featured_streams , .explore_streams{
+    padding: 0.5rem;
+    position: relative;
+    header{
+        padding: 1rem;
+        width: 100%;
+        text-transform: capitalize;
+        h2{
+            @include textgrad();
+        }
+        p{
+            opacity: 0.7;
+        }
+    }
+}
+.top_featured_streams{
+    .featured_section{
+        scroll-behavior: smooth;
+        padding: 1rem;
+        @include flexBox(row , flex-start , flex-start ,1rem);
+        margin: auto;
+        width: 99%;
+        overflow-y: auto;
+        @include scrollbar(0px , 0px);
+        .btn{
+            position: sticky;
+            height: 3rem;
+            margin: auto;
+            background-color: rgba(69, 69, 69, 0.45);
+            box-shadow: 0px 10px 20px rgba(3, 3, 3, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            opacity: 0.9;
+            z-index: 1;
+            &:first-child{
+                left: 0.2rem;
+                transform: rotate(180deg);
+            }
+            &:last-child{
+                right: 0.2rem;
+            }
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+.explore_streams{
+    margin-top: 1rem;
+    .explore_section{
+        // @include flexBox();
+        @include gridwrap(18rem , 1rem);
+        flex-wrap: wrap;
+        place-items: center;
+    }
+
+}
+@media (max-width:450px) {
+    .explore_streams{
+        .explore_section{
+            @include flexBox();
+        }
+    
+    }
+    .top_featured_streams{
+        .featured_section{
+            .btn{
+                height: 2rem;
+                &:first-child{
+                    left: -1rem;
+                    transform: rotate(180deg);
+                }
+                &:last-child{
+                    right: -1rem;
+                }
+            }
+        }
+    }
+}

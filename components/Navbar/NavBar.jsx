@@ -11,6 +11,7 @@ import WalletIcon from '@mui/icons-material/Wallet';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useRouter } from 'next/router';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 
 const NavBar = () => {
     let router = useRouter();
@@ -38,9 +39,12 @@ const NavBar = () => {
 
             <li className={`${path =="/" && style.active_link}`} onClick={()=>router.push("/")} ><HomeIcon />  <p className={shrikclass}>home</p></li>
 
-            <li className={`${path =="/post" && style.active_link}`} onClick={()=>router.push("/post")}><DynamicFeedIcon /> <p className={shrikclass}>post</p></li>
+            {/* <li className={`${path =="/post" && style.active_link}`} onClick={()=>router.push("/post")}><DynamicFeedIcon /> <p className={shrikclass}>post</p></li> */}
+
 
             <li className={`${path =="/tournaments" && style.active_link}`}  onClick={()=>router.push("/tournaments")}><EmojiEventsIcon /> <p className={shrikclass}>tournaments</p></li>
+
+            <li className={`${path =="/streams" && style.active_link}`} onClick={()=>router.push("/streams")}><LiveTvIcon /> <p className={shrikclass}>live stream</p></li>
 
             <li className={`${path =="/club" && style.active_link}`} onClick={()=>router.push("/club")}><GroupsIcon /> <p className={shrikclass}>club</p></li>
 
