@@ -36,6 +36,9 @@ function MyApp({ Component, pageProps }) {
       case ("/club/createclub"):
         setisnav(1);
         break;
+      case ("/streams/stream"):
+        setisnav(1);
+        break;
     
       default:
         setisnav(0)

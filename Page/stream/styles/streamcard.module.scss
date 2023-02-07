@@ -4,10 +4,10 @@
     background-color: rgba(51, 49, 84, 0.749);
     // width: 25rem;
     max-width: 25rem;
-    // flex: 0 0 25rem;
     padding: 0.5rem;
     border-radius: 0.7rem;
     @include flexBox(column , center ,flex-start);
+    cursor: pointer;
     img{
         max-width: 100%;
     }

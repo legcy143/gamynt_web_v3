@@ -1,0 +1,279 @@
+@import "../../../styles/mixins";
+
+.nav {
+    padding-inline: 1rem;
+    position: sticky;
+    width: 100%;
+    height: $navheight;
+    backdrop-filter: blur(10px);
+    @include flexBox(row, space-between, center, 1rem)
+}
+
+.stream_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 33rem;
+    gap: 1rem;
+    height: calc(100vh - $navheight);
+    height: calc(100dvh - $navheight);
+
+    .stream_feature_section,
+    .stream_section {
+        padding: 0.2rem;
+        position: relative;
+
+    }
+
+    // .stream_section{
+    // }
+    .stream_feature_section {
+        background-color: rgba(49, 48, 48, 0.84);
+        border-radius: 0.5rem;
+        max-height: calc(100vh - $navheight);
+        max-height: calc(100dvh - $navheight);
+        display: flex;
+        flex-direction: column;
+        // overflow-y: scroll;
+        // @include scrollbar();
+    }
+}
+
+.vedio_container {
+    width: 100%;
+    aspect-ratio: 2/1;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .vedio_actions_container{
+        position: absolute;
+        top: 0%;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.304);
+        width: 100%;
+        height: 100%;
+        @include flexBox(column, flex-start, flex-start, 1rem);
+        .bottom_action{
+            padding: 0.5rem 0.2rem;
+            width: 100%;
+            margin-top: auto;
+            @include flexBox();
+            input{
+                width: 100%;
+                cursor: pointer;
+            }
+            span{
+                padding: 0.1rem 1rem;
+                border-radius: 11rem;
+                background-color: red;
+                text-shadow: 10px 10px 10px black;
+                display: block;
+                color: black;
+            }
+        }
+    }
+
+}
+
+.stream_details {
+    h2 {
+        padding: 0.5rem;
+        @include textwrap(2);
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.7rem;
+    }
+}
+
+.stream_more_option {
+    padding: 0.5rem;
+    width: 100%;
+    @include flexBox(row, flex-start, center, 1rem);
+
+    button {
+        height: 2.3rem;
+        background-color: rgba(69, 69, 69, 0.45);
+        box-shadow: 0px 10px 20px rgba(3, 3, 3, 0.9);
+        backdrop-filter: blur(20px);
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        opacity: 0.9;
+
+        svg {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+
+        &:hover {
+            background-color: rgba(var(--primary-color-rgb), 0.4);
+            opacity: 1;
+        }
+    }
+}
+
+.streamer_owner_info {
+    padding: 0.1rem 0.5rem;
+    @include flexBox(row, flex-start);
+
+    img {
+        width: 3.2rem;
+        height: 3.2rem;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    p {
+        @include textwrap();
+        font-size: 1.1rem;
+        opacity: 0.8;
+    }
+
+    button {
+        background-color: rgba(var(--primary-color-rgb), 0.3);
+        padding: 0.2rem 2rem;
+        margin-left: auto;
+
+        &:hover {
+            background-color: rgba(var(--primary-color-rgb), 0.5);
+
+        }
+    }
+}
+
+//  stream features live chat
+.stream_feature_nav {
+    padding: 0.5rem;
+    background-color: inherit;
+    position: sticky;
+    top: -0.2rem;
+    text-transform: capitalize;
+    backdrop-filter: blur(20px);
+
+    li {
+        list-style: none;
+    }
+}
+
+.livechat_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    @include scrollbar();
+}
+
+.live_user {
+    padding: 0.5rem;
+    width: 98%;
+    margin: 0.5rem auto;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.30);
+    border-radius: 0.3rem;
+    p{
+        margin-left: 2.2rem;
+        opacity: 0.9;
+        font-weight: 200;
+        line-height: 1.3rem;
+    }
+    div {
+        width: 100%;
+        @include flexBox(row, flex-start);
+        img {
+            width: 2rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        small{
+            opacity: 0.8;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+
+}
+
+.send_live_chat {
+    padding: 0.5rem;
+    margin-top: auto;
+    position: sticky;
+    bottom: 0%;
+    z-index: 10;
+    backdrop-filter: blur(50px);
+    background-color: rgba(38, 38, 38, 0.527);
+    box-shadow: 0px 7px 21px rgb(0, 0, 0);
+    label {
+        display: block;
+        position: relative;
+        @include flexBox();
+        input , textarea{
+            font-family: inherit;
+            @include scrollbar(0px , 0px);
+            resize: none;
+            margin: 0.5rem 0rem;
+            width: 90%;
+            padding: 0.6rem;
+            border: none;
+            outline: none;
+            font-size: 0.95rem;
+            background-color: transparent;
+            border-bottom: 2px solid rgba(var(--primary-color-rgb), 0.5);
+            max-height: 4rem;
+            &::placeholder {
+                font-size: 0.9rem;
+            }
+        }
+        svg{
+            color: rgba(var(--primary-color-rgb), 1);
+            filter: blur(0.1px);
+            transform: rotate(-25deg);
+        }
+    }
+
+    div {
+        width: 100%;
+        @include flexBox(row, flex-start);
+
+        img {
+            width: 2rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        p {
+            opacity: 0.7;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+
+}
+
+@media (max-width:950px) {
+    .stream_container {
+        gap: 0.5rem;
+        grid-template-columns: 1fr 25rem;
+    }
+}
+
+@media (max-width:$mobile) {
+    .stream_container {
+        @include flexBox(column, flex-start, flex-start, 0rem);
+        padding: 0.5rem;
+
+        .stream_section {
+            width: 100%;
+        }
+
+        .stream_feature_section {
+            width: 100%;
+            height: 50%;
+            min-height: 30rem;
+        }
+    }
+}
