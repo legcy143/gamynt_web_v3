@@ -6,7 +6,17 @@
     width: 100%;
     height: $navheight;
     backdrop-filter: blur(10px);
-    @include flexBox(row, space-between, center, 1rem)
+    @include flexBox(row, space-between, center, 1rem);
+    button{
+        padding: 0.2rem 1rem;
+    }
+    .report{
+        background-color: rgba(255, 0, 0, 0.263);
+        svg{
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
 }
 
 .stream_container {
@@ -44,12 +54,15 @@
     overflow: hidden;
     border-radius: 0.5rem;
     position: relative;
+    transition: 0.30s ease;
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
     .vedio_actions_container{
+        transition: 0.30s ease;
+        visibility: hidden;
         position: absolute;
         top: 0%;
         z-index: 10;
@@ -74,6 +87,11 @@
                 display: block;
                 color: black;
             }
+        }
+    }
+    &:hover{
+        .vedio_actions_container{
+            visibility: visible;
         }
     }
 

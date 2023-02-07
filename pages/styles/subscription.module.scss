@@ -1,0 +1,70 @@
+@import "../../styles/mixins";
+
+.subscription_main_container{
+    display: flex;
+    min-height: calc(100vh - $navheight);
+    min-height: calc(100dvh - $navheight);
+}
+
+.Subscription_section{
+    margin: auto;
+    width: min(50rem , 100%);
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background:  linear-gradient(rgba(63, 103, 235, 0.491) ,rgba(0, 128, 0, 0.269) , rgba(0, 0, 0, 0.201));
+}
+
+.sub_card{
+    width: min(15rem , 90%);
+    border: 2px solid rgba(233, 233, 233, 0.40);
+    backdrop-filter: blur(50px);
+    border-radius: 0.5rem;
+    @include flex_box(column);
+        header{
+        @include flex_box(row , center , flex-end , 0rem);
+        height: 3rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        h1{
+            @include flex_box();
+            width: 80%;
+            height: 5rem;
+            border-radius: 1rem;
+            background: linear-gradient(rgba(109, 4, 4,) , rgba(173, 148, 5, 0.95));
+            box-shadow: 7px 7px 20px rgba(47, 151, 255, 0.667);
+        }
+    }
+
+    li{
+        margin: 0.5rem;
+    }
+    footer{
+        @include flex_box(column);
+        height: 8rem;
+        width: 100%;
+        h1{
+            font-size: 1.7rem;
+            span{
+                font-weight: 300;
+                font-size: 0.8rem;
+                opacity: 0.8;
+            }
+        }
+        button{
+            width: min(15rem , 90%);
+        }
+    }
+}
+
+@media (max-width:550px) {
+    .Subscription_section{
+        padding: 5rem 0rem;
+        flex-direction: column;
+        height: fit-content;
+        justify-content: flex-start;
+        gap: 5rem;
+    }
+}
