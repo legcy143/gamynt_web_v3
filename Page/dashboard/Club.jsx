@@ -1,8 +1,12 @@
 import React from 'react'
+import Clubmember from './Clubmember'
 
 const Club = () => {
   return (
-    <div>Club</div>
+    <main>
+      club past detail loading ... 
+    <Clubmember/>
+    </main>
   )
 }
 

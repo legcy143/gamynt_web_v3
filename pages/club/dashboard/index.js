@@ -10,7 +10,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Dashboard = () => {
     let router = useRouter();
-    const [pageroute, setpageroute] = useState(1)
+    const [pageroute, setpageroute] = useState(3)
     const [pagecompo, setpagecompo] = useState("loading .. ")
     const [sidenav, setsidenav] = useState(style.close_nav)
     useEffect(() => {

@@ -1,0 +1,53 @@
+@import "../../../styles/mixins";
+
+
+
+.member_info_container{
+    overflow-x: scroll;
+    @include scrollbar();
+    .tittle{
+        text-transform: capitalize;
+        @include textgrad();
+    }
+}
+.table{
+    padding: 0.5rem;
+    width: max(40rem , 100%);
+    section , header{
+        display: grid;
+        grid-template-columns:4rem  4rem 3rem 1fr 1fr 1fr 6rem;
+        gap: 0.1rem;
+        align-items: center;
+        text-align: center;
+    }
+    section{
+        input{
+            margin: auto;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        img{
+            width: 2.3rem;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+        }
+        h2{
+            text-align: start;
+            font-size: 1.3rem;
+            font-weight: 400;
+            @include textwrap();
+        }
+    }
+        
+}
+
+.heading{
+    position: sticky;
+    top: -0.3rem;
+    border-radius: 0.3rem;
+    background-color: rgba(34, 34, 49, 0.5);
+    p{
+        line-height: 3rem;
+        opacity: 0.8;
+    }
+}
